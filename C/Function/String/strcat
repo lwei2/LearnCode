@@ -1,0 +1,10 @@
+char *strcat(char *dest,char *src)
+{
+	char *t =dest;
+	assert(dest!=NULL&&src!=NULL);
+	while(*dest)
+		*dest++;
+	while((*dest++=*src++)!='\0')
+		;
+	return t;
+}

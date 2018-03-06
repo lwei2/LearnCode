@@ -1,0 +1,13 @@
+void *memcpy(void *dest,const void *src,size_t n)
+{
+	char *d=(char *)dest;
+	const char *s=(const char *)src;
+	assert(dest!=NULL&&src!=NULL&&n>0);
+	if(dest==src)
+		return src;
+	while(n-->0)
+	{
+		*d++=*s++;
+	}
+	return dest;
+}

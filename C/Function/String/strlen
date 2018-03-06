@@ -1,0 +1,17 @@
+#ifdef
+  int strlen(char *src)
+  {
+    assert(src!=NULL);
+    int len=0;
+    while((*src++)!='\0')
+          len++;
+    return len;
+   }
+ #else
+    int strlen(char *src)
+    {
+      if(*src==NULL)
+          return 0;
+      else
+          return (1+strlen(++src));
+    }

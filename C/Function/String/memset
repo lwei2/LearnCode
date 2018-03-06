@@ -1,0 +1,10 @@
+void *memset(void *src,int value,size_t n)
+{
+	char *t=(char *)src;
+	assert(src!=NULL&&n>0);
+	while(n-->0)
+	{
+		*t++=value;
+	}
+	return src;
+}
