@@ -2,7 +2,7 @@
     > File Name: String_append.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
-    > The Description: 
+    > The Description:String member functions append 
  ************************************************************************/
 #include<iostream>
 #include<string>

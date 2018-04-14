@@ -1,3 +1,11 @@
+/*************************************************************************                                                          
+     > File Name: String_assign.cpp
+     > Author: lwei2
+     > Mail: lwei2@IT.com 
+     > The Description:String member functions assign 
+************************************************************************/
+
+
 #include<iostream>
 #include<string>
 

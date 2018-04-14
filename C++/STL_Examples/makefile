@@ -11,4 +11,4 @@ OBJDIR = .
 	#mv $@ $(OBJDIR)
 all: $(TARGET) clean
 clean:
-	rm -rf *.o
+	rm -rf *.o && rm -rf a.out

@@ -2,7 +2,7 @@
     > File Name: String.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
-    > The Description: 
+    > The Description:String 
  ************************************************************************/
 #include<iostream>
 #include<string>
