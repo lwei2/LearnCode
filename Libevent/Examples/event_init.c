@@ -6,7 +6,7 @@ struct event_base *event_init(void)
 	if(base == NULL)
 	{
 		event_errx(1, "%s: Uable to construct event_base", __func__);
-		base = NULL;
+		return NULL;
 	}
 	current_base = base;
 	return (base);
