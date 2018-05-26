@@ -12,28 +12,27 @@ using namespace std;
 
 int main(void)
 {
-	string line ;
-	int len = 0;
-	int num = 0;
-	getline(cin,line);
-	len=line.length() - 1;
-	while(len>=0)
+	string str;
+	char ch;
+	int i, count = 0;
+	getline(cin,str);
+	cin>>ch;
+	for(i = 0; i <str.length(); ++i)
 	{
-		if(line[len]==' ')
-		{
-			len--;
-			continue;
-		}
+#if METHOD1
+		str[i] = tolower(str[i]);
+#else
+		if(str[i] >= 'A' && str[i] <= 'Z')
+		  str[i] += 'a' -'A';
 		else
-		  break;
+		  continue;
 	}
-	while(line[len]!=' ')
+	for(i = 0; i < str.length(); ++i)
 	{
-		len--;
-		num++;
-		if(len<0)
-		  break;
+		if(str[i] == ch)
+		  count++;
 	}
-	cout<<num<<endl;
+
+  	cout<<num<<endl;
 	return 0;
 }
