@@ -1,8 +1,8 @@
 /*************************************************************************
-    > File Name: sample1.cpp
+    > File Name: sum.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
-    > The Description: 
+    > The Description: 输入一个数，并不断累加
  ************************************************************************/
 
 #include<iostream>

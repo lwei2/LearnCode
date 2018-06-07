@@ -2,7 +2,7 @@
     > File Name: sample.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
-    > The Description: 
+    > The Description: 输入，输出
  ************************************************************************/
 
 #include<iostream>
