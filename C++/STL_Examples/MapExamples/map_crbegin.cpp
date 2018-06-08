@@ -12,11 +12,10 @@ int main(int argc,char *argv[])
 	myMap["B"] = 200;
 	myMap["C"] = 300;
 
-	map<string,int>::iterator it = myMap.crbegin();
-	while(it!=myMap.crend())
+	map<string,int>::const_reverse_iterator it;
+	for(it = myMap.crbegin();it!=myMap.crend();++it)
 	{
 		cout<<it->first<<","<<it->second<<endl;
-		++it;
 	}
 
 	return 0;
