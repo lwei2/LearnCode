@@ -14,8 +14,19 @@ C++的引用
 C++强制转换类型
 =========
 1.1 在C++中static_cast，const_cast，reinterpret_cast，dynmic_cast均是用于强制类型转换。
+		static_cast<new_type>      (expression)
+		dynamic_cast<new_type>     (expression) 
+		const_cast<new_type>       (expression) 
+		reinterpret_cast<new_type> (expression)
 
 1.2 static_cast用于数据类型的强制转换，强制将一种数据类型转换称为另一种数据类型。
+		a.用于类层次结构中基类（父类）和派生类（子类）之间指针或引用的转换。
+		b.进行上行转换（把派生类的指针或引用转换成基类表示）是安全的；
+		c.进行下行转换（把基类指针或引用转换成派生类表示）时，由于没有动态类型检查，所以是不安全的。
+		d.用于基本数据类型之间的转换，如把int转换成char，把int转换成enum。这种转换的安全性也要开发人员来保证。
+		e.把空指针转换成目标类型的空指针。
+		f.把任何类型的表达式转换成void类型。
+		注意：static_cast不能转换掉expression的const、volatile、或者__unaligned属性。
 
 1.3 const_cast用于强制去掉不能修改的常数特性。 
 
