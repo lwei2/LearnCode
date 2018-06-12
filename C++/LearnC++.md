@@ -1,6 +1,11 @@
 C++
 =========
 
+# 目录
+> * [1.C++简介] (#main-chapter-1)
+
+# 1. C++简介 <a id="main-chapter-1"></a>
+=========
 1.C++ 完全支持面向对象的程序设计,封装,抽象,继承,多态.
 
 C++的引用
@@ -14,11 +19,12 @@ C++的引用
 C++强制转换类型
 =========
 1.1 在C++中static_cast，const_cast，reinterpret_cast，dynmic_cast均是用于强制类型转换。
-		static_cast<new_type>      (expression)
-		dynamic_cast<new_type>     (expression) 
-		const_cast<new_type>       (expression) 
-		reinterpret_cast<new_type> (expression)
 
+```	static_cast<new_type>      (expression)
+	dynamic_cast<new_type>     (expression) 
+	const_cast<new_type>       (expression) 
+	reinterpret_cast<new_type> (expression)
+```
 1.2 static_cast用于数据类型的强制转换，强制将一种数据类型转换称为另一种数据类型。
 		a.用于类层次结构中基类（父类）和派生类（子类）之间指针或引用的转换。
 		b.进行上行转换（把派生类的指针或引用转换成基类表示）是安全的；
@@ -67,3 +73,5 @@ C++多态性
 3.静态绑定：绑定的是对象的静态类型，某特性（比如函数）依赖于对象的静态类型，发生在编译期。
 
 4.动态绑定：绑定的是对象的动态类型，某特性（比如函数）依赖于对象的动态类型，发生在运行期。
+
+
