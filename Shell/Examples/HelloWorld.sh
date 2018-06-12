@@ -4,5 +4,5 @@
 # mail: lwei@IT.com
 # Description:输出Hello World
 #########################################################################
-#/bin/bash
+#!/bin/bash
 echo "Hello World!"
