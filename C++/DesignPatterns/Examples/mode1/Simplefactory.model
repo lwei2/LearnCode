@@ -1,0 +1,36 @@
+
+enum CTYPE{COREA, COREB};
+class SingleCore
+{
+	public:
+		virtual void Show() = 0;
+};
+class SingleCoreA:public SingleCore
+{
+	public:
+		void Show()
+		{
+			cout<<"SingleCore A"<<endl;
+		}
+};
+class SingleCoreB:public SingleCore 
+{
+	public:
+		void Show()
+		{
+			cout<<"SingleCore B"<<endl;
+		}
+};
+class Factory
+{
+	public:
+		SingleCore * CreateSingleCore(enum CTYPE ctype)
+		{
+			if(ctype == COREA)
+				return new SingleCoreA();
+			else if(ctype == COREB)
+				return new SingleCoreB();
+			else
+				return NULL;
+		}
+};
