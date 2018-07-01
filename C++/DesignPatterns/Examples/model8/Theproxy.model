@@ -1,0 +1,150 @@
+
+class Image
+{
+	public:
+		Image(string name):m_imageName(name){}
+		virtual ~Image(){}
+		virtual void Show(){}
+	protected:
+		string m_imageName;
+};
+class BigImage:public Image
+{
+	public:
+		BigImage(string name):Image(name){}
+		~BigImage(){}
+		void Show()
+		{
+			cout<<"show big image:"<<m_imageName<<endl;
+		}
+};
+class BigImageProxy:public Image
+{
+	public:
+		BigImageProxy(string name):Image(name){}
+		~BigImageProxy()
+		{
+			delete m_bigImage;
+		}
+		void Show()
+		{
+			if(m_bigImage == NULL)
+				m_bigImage = new BigImage(m_imageName);
+			m_bigImage->Show();
+		}
+};
+
+int main(int argc,char *argv[])
+{
+	Image *image = new BigImageProxy("proxy.jpg");
+	image->Show();
+	delete image;
+	return 0;
+}
+
+template<class T>
+class auto_ptr
+{
+	public:
+		explicit auto_ptr(T *p = 0):pointee(p){}
+		auto_ptr(auto_ptr<T>& rhs):pointee(rhs.release()){}
+		~auto_ptr()
+		{
+			deletee pointee;
+		}
+		auto_ptr<T>&operator=(auto_ptr<T>& rhs)
+		{
+			if(this!=&rhs)
+			  reset(rhs.release());
+			return *this;
+		}
+		T& operator*() const
+		{
+			return *pointee;
+		}
+		T* operator->() const
+		{
+			return pointee;
+		}
+		T* get() const
+		{
+			return pointee;
+		}
+		T* release()
+		{
+			T *oldPointee=pointee;
+			pointee = 0;
+			return oldPointee;
+		}
+		void reset(T *p = 0)
+		{
+			if(pointee != p)
+			{
+				delete pointee;
+				pointee = p;
+			}
+		}
+	private:
+		T *pointee;
+};
+
+
+template<typename T>
+class smart_ptr
+{
+	public:
+		smart_ptr(T *p = 0):pointee(p),count(new size_t(1){}
+		smart_ptr(const smart_ptr &rhs):pointee(rhs.pointee),count(rhs.count)
+		{
+			++*count;
+		}
+		~smart_ptr()
+		{
+			decr_count();
+		}
+		smart_ptr& operator=(const smart_ptr &rhs)
+		{
+				++*count;
+				decr_count();
+				pointee=rhs.pointee;
+				count=rhs.pointee;
+				return *this;
+		}
+		T *operator->()
+		{
+			return pointee;
+		}
+		const T *operator->() const
+		{
+			return *pointee;
+		}
+		T &operator*()
+		{
+			return *pointee;
+		}
+		const T &operator*() const
+		{
+			return *pointee;
+		}
+		size_t get_refcount()
+		{
+			return *count;
+		}
+	private:
+		T *pointee;
+		size_t *count;
+		void decr_count()
+		{
+			if(--*count==0)
+			{
+				delete pointee;
+				delete count;
+			}
+		}
+};
+
+
+
+
+
+

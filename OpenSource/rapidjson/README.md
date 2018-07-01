@@ -6,4 +6,5 @@
 	2).mkdir build for rapidjson;
 	3).cd build and cmake ..
 	4).
+	5).#make && make install
 2.

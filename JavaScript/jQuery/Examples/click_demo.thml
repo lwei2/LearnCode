@@ -1,0 +1,14 @@
+<html>
+<head>
+<script type="txt/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("p").click(function(){
+			$(this).hide();
+		)};
+	});
+</head>
+<body>
+	<p> If you click on me, I will disappear.</p>
+</body>
+</html>

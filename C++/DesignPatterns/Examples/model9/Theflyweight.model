@@ -1,0 +1,179 @@
+#ifndef METHOD1
+
+enum PieceColor
+{
+	BLACK,
+	WHITE
+};
+
+struct PiecePos
+{
+	int x;
+	int y;
+	PiecePos(int a, int b):x(a),y(b){}
+};
+
+class Piece
+{
+	public:
+		Piece(PieceColor color, PiecePos pos):m_color(color),m_pos(pos){}
+		~Piece(){}
+		virtual void Draw(){}
+};
+class BlackPiece:public Piece
+{
+	public:
+		BlackPiece(PieceColor color, PiecePos pos):Piece(color,pos){}
+		~BlackPiece(){}
+		void Draw()
+		{
+			cout<<"	public:
+				BlackPiece(PieceColor color, PiecePos pos):Piece(color,pos){}
+			~BlackPiece(){}
+			void Draw()
+			{
+				cout<<"绘制一枚黑棋"<<endl;
+			}
+		}
+};
+
+class WhitePiece:public Piece
+{
+	public:
+		WhitePiece(PieceColor color,Piece pos):Piece(color,pos){}
+		~WhitePiece(){}
+		void Draw()
+		{
+			cout<<"绘制一枚白棋"<<endl;
+		}
+};
+
+class PieceBoard
+{
+	public:
+		PieceBoard(string black, string white):m_blackName(black),m_whiteName(white){}
+		~PieceBoard()
+		{
+			Clear();
+		}
+		void SetPiece(PieceColor color, PiecePos pos)
+		{
+			Piece *piece = NULL;
+			if(color == BLACK)
+			{
+				piece = new BlackPiece(color,pos);
+				cout<<m_blackName<<"在位置("<<pos.x<<','<<pos.y<<")";
+				piece->Draw();
+			}
+			else
+			{
+				piece = new WhitePiece(color,pos);
+				cout<<m_whiteName<<"在位置("<<pos.x<<','<<pos.y<<")";
+				piece->Draw();
+
+			}
+			m_vecPiece.push_back(piece);
+		}
+		void Clear()
+		{
+			int size = m_vecPiece.size();
+			for(int i = 0; i < size;i ++)
+			{
+				delete m_vecPiece[i];
+			}
+		}
+};
+
+
+int main(int argc,char *argv[])
+{
+	PieceBoard pieceBoard("A", "B");
+	pieceBoard.SetPiece(BLACK, PiecePos(4,4));
+	pieceBoard.SetPiece(WHITE, PiecePos(4,16));
+	pieceBoard.SetPiece(BLACK, PiecePos(16,4));
+	pieceBoard.SetPiece(WHITE, PiecePos(16,16));
+
+	return 0;
+}
+
+#else
+enum PieceColor
+{
+	BLACK,
+	WHITE
+};
+struct PiecePos
+{
+	int x;
+	int y;
+	PiecePos(int a,int b):x(a),y(b){}
+};
+class Piece
+{
+	public:
+		Piece(PieceColor color):m_color(color){}
+		~Piece(){}
+		virtual void Draw(){}
+	private:
+		PieceColor m_color;
+};
+class BlackPiece:public Piece
+{
+	public:
+		BlackPiece(PieceColor color):Piece(color){}
+		~BlackPiece(){}
+		void Draw()
+		{
+			cout<<"绘制一枚黑棋"<<endl;
+		}
+};
+class WhitePiece:public Piece
+{
+	public:
+		WhitePiece(PieceColor color):Piece(color){}
+		~WhitePiece(){}
+		void Draw()
+		{
+			cout<<"绘制一枚白棋"<<endl;
+		}
+};
+class PieceBoard
+{
+	public:
+		PieceBoard(string black, string white):m_blackName(black), m_whiteName(white)
+	{
+		m_blackPiece = NULL;
+		m_whitePiece = NULL;
+	}
+	~PieceBoard()
+	{
+		delte m_blackPiece;
+		delte m_whitePiece;
+	}
+	void SetPiece(PieceColor color, PiecePos pos)
+	{
+		if(color == BLACK)
+		{
+			if(m_blackPiece == NULL)
+			  m_blackPiece = new BlackPiece(color);
+			cout<<m_blackPiece<<"在位置("<<pos.x<<','<<pos.y<<")";
+			m_blackPiece->Draw();
+		}
+		else
+		{
+			if(m_whitePiece == NULL)
+			  m_blackPiece = new WhitePiece(color);
+			cout<<m_whitePiece<<"在位置("<<pos.x<<','<<pos.y<<")";
+			m_whitePiece->Draw();
+		}
+		m_vecPos.push_back(pos);
+	}
+	private:
+		vector<PiecePos> m_vecPos;
+		Piece *m_blackPiece;
+		Piece *m_whitePiece;
+		string m_blackPiece;
+		string m_whitePiece;
+
+}
+#endif
