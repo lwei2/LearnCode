@@ -1,4 +1,7 @@
-安装Redis:
+
+安装Redis
+==========
+	安装步骤如下：
 	1.#sudo apt-get install update
 	2.#sudo apt-get install redis-server
 
@@ -26,4 +29,31 @@ http://redisbook.readthedocs.org/en/latest/:Redis设计与实现
 https://github.com/huangz1990/annotated_redis_source:注释版Redis源码
 
 
+
+Redis常用命令
+==========
+
 1.redis键命令: >command key_name
+2.	
+ 将键为key的值设置为value
+	#set key value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+一个事务从开始到执行完成，经过三个阶段：开始事务，执行命令，提交事务。
+

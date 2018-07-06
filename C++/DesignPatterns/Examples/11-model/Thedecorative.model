@@ -1,0 +1,107 @@
+
+
+class Phone
+{
+	public:
+		Phone(){}
+		virtual ~Phone(){}
+		virtual void ShowDecorate(){}
+};
+
+
+class iPhone:public Phone
+{
+	private:
+		string m_name;
+	public:
+		iPhone(string name):m_name(name){}
+		~iPhone(){}
+		void ShowDecorate()
+		{
+			cout<<m_name<<"的装饰"<<endl;
+		}
+};
+
+class NokiaPhone:public Phone
+{
+	private:
+		string m_name;
+	public:
+		NokiaPhone(string name):m_name(name){}
+		~NokiaPhone(){}
+		void ShowDecorate()
+		{
+			cout<<m_name<<"的装饰"<<endl;
+		}
+};
+
+
+
+
+class DecoraterPhone:public Phone
+{
+	private:
+		Phone *m_phone;
+	public:
+		DecoraterPhone(Phone *phone):m_phone(phone){}
+		virtual void ShowDecorate()
+		{
+			m_phone = ShowDecorate();
+		}
+};
+
+class DecoraterPhoneA:public DecoraterPhoneA
+{
+	public:
+		DecoraterPhoneA(Phone *phone):DecoraterPhone(phone)
+		{
+		
+		}
+		void ShowDecorate()
+		{
+			DecoraterPhone::ShowDecorate();
+			AddDecorate();
+		}
+	private:
+		void AddDecorate()
+		{
+			cout<<"增加挂件"<<endl;
+		}
+};
+
+class DecoraterPhoneB:public DecoraterPhone
+{
+	public:
+		DecoraterPhoneB(Phone *phone):DecoraterPhone(phone){}
+		void ShowDecorate()
+		{
+			DecoraterPhone::ShowDecorate();
+			AddDecorate();
+		}
+	private:
+		void AddDecorate()
+		{
+			cout<<"屏幕贴膜"<<endl;
+		}
+};
+
+int main(void)
+{
+	Phone *iphone = new NokiaPhone("6300");
+	Phone *dpa = new DecoraterPhoneA(iphone);
+	Phone *dpb = new DecoraterPhoneB(dpa);
+	dpb->ShowDecorate();
+	delete dpa;
+	delete dpb;
+	delete iphone;
+	return 0;
+}
+
+
+
+
+
+
+
+
+
