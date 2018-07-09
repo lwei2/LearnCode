@@ -21,3 +21,23 @@
 
 	.zip压缩比解压: #unzip xxx.zip
 	.zip压缩	  : #zip xxx.zip xxx
+
+
+3.生成静态库
+	ar -d|m[ab]|-p|q[f]|r[ab][f][u]|-s|-t|x[o]
+	d			从归档文件中删除文件
+	m[ab]		在归档文件中移动文件
+	p			打印在归档文件中找到的文件
+	q[f]		将文件快速追加到归档文件中
+	r[ab][f][u]	替换归档文件中已有的文件或加入新文件
+	s			作为 ranlib 工作
+	t			显示归档文件的内容	
+	x[o]		从归档文件中分解文件
+
+
+
+关于进程的操作
+1.查看某进程:ps aux| grep "xxx"
+2.杀死某进程:sudo kill PID或者 killall [-s] -9 进程名
+3.
+		
