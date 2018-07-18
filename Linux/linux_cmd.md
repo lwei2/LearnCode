@@ -39,5 +39,15 @@
 关于进程的操作
 1.查看某进程:ps aux| grep "xxx"
 2.杀死某进程:sudo kill PID或者 killall [-s] -9 进程名
-3.
+
+
+
+
+ubuntu添加或删除ppa源
+	添加ppa源命令:#sudo add-apt-repository ppa:user/ppa-name && sudo apt-get update
+	删除ppa源命令:#sudo add-apt-repository -r ppa:user/ppa-name 
+				  #cd /ect/apt/sources.list.d
+				  #rm -rf ppa源保存保存文件
+				  #sudo apt-get update
+
 		

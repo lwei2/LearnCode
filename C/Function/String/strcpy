@@ -1,8 +1,0 @@
-char *strcpy(char *dest,const char *src)
-{
-	char *t=dest;
-	assert(dest!=NULL&&src!=NULL);
-	while((*dest++=*src++)!='\0')
-		;
-	return dest;
-}
