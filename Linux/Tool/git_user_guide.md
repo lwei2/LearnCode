@@ -25,6 +25,6 @@
 	提示：一个版本库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
 	提示：(如'git pull...')
 	提示：详见 'git push -- help' 中的 'Note about fast-forwards' 小节。
-	处理办法：git push -u origin + master
+	处理办法：git push -u origin +master
 
 
