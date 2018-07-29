@@ -8,3 +8,9 @@
 	3)https://github.com/wsdjeg/DotFiles
 
 alt + num [change the tab]
+
+
+
+常见配置
+1.开启语法高亮 
+	syntax [enable|on]

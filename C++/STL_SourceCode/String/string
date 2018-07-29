@@ -1,3 +1,4 @@
+
 string::append
 	1.Appends a copy of str.
 		string& append(const string& str);
