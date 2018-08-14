@@ -12,10 +12,15 @@ Install for Git
 
 	#sudo /ect/init.d/ssh restart
 
-4.sudo apt-get install git-core
+4.安装git
+
+	#sudo apt-get install git-core
+
 5.设置git配置信息
+
 	#git config --global user.name "user"
-	#git config --global user.email "xx@.com"
+	#git config --global user.email "xxx@.com"
+	
 6.为git账号添加ssh keys
 
 	#ssh-keygen -C 'user.email' -t rsa
@@ -23,7 +28,11 @@ Install for Git
 7.copy id_rsa.pub key to the github Web for SSH KEY and save it.
 
 8.测试是否连接成功
+
 	#ssh -T git@github.com
+	
 9.create new file to repositories,and init repositories 
-	create repositories && git init
+	
+	#create repositories && git init
+
 10.welcome to use git
