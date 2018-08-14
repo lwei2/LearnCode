@@ -7,6 +7,7 @@ Install for Git
 	#git --version
 
 2.apt-get install openssh-server openssh-client
+
 3.启动ssh服务
 
 	#sudo /ect/init.d/ssh restart
