@@ -32,6 +32,13 @@ MySQL常用操作
 
 
 
+设置mysql允许远程访问：
+    1.编辑/etc/mysql/mysql.conf.d/mysqld.cnf,注释bind-address=127.0.0.1;
+    2.退出，保存，进入mysql服务,执行授权命令
+        #grant all on *.* to root@'%' identified by '你的密码' with grant option;
+
+        #flush privileges;
+    3.重启mysql服务:#service mysql restart
 
 
 
