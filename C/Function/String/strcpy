@@ -1,3 +1,10 @@
+1.函数原型:
+    char *strcpy(char *dest,char *src)
+
+    
+
+
+2.函数的实现
 #if
 char *strcpy(char *dest,const char *src)
 {
@@ -7,6 +14,20 @@ char *strcpy(char *dest,const char *src)
 	  ;
 	return t;
 }
+#elif
+char *strcpy(char *dest,const char *src)
+{
+    assert(src!=NULL&&dest!=NULL);
+    int i = 0;
+    while('\0'!=src[i])
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i]='\0';
+    return dest;
+}
+
 #else
 char *strcpy(char *dest,const char *src)
 {

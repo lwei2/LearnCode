@@ -1,3 +1,8 @@
+1.函数原型:exntern size_t strlen(const char *str)
+    功能:计算给定字符串的长度，不包括'\0'。
+    参数:str-给定字符串
+    返回值:size_t,即unsigned int。 
+2.函数的实现:
 #ifdef
   int strlen(char *src)
   {
