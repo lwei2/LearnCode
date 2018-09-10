@@ -459,8 +459,178 @@
 
     根据堆栈的定义，每次进栈的数据元素都放在原当前栈顶元素之间而成为新的栈顶元素，每次退栈的数据元素都是原当前栈顶元素，即最后进入堆栈的数据元素总是最先推出堆栈，因此，堆栈也称作后进先出的线性表，或简称后进先出表。
 
+    堆栈的数据集合可以表示为a0a1...an-1,每个数据元素的数据类型为DataType。
 
-    一棵树最上面的节点称为根节点。
+```
+    堆栈操作集合:
+        1)初始化堆栈S:void StackInitiate(S)
+        2)非空否:int StackNotEmpty(S)
+        3)入栈:StackPush(S,x)
+        4)出栈:int StackPop(S,d)
+        5)取栈顶元素:StackTop(S,d)
+```
+    顺序存储结构的堆栈称作顺序堆栈。
+```
+顺序堆栈定义:
+    typedef struct 
+    {
+        DataType stack[MaxStackSize];
+        int top;
+    }SeqStack;
+顺序堆栈的操作实现:
+    1)初始化:
+        void StackInitiate(SeqStack *S)
+        {
+            S->top = 0;
+        }
+    2)非空否:
+        int StackNotEmpty(SeqStack *S)
+        {
+            if(S->top <= 0)
+                return 0;
+            else
+                return 1;
+        }
+    3)入栈:
+        int StackPush(SeqStack *S, DataType x)
+        {
+            if(S->top >= MaxStackSize)
+            {
+                cout<<"堆栈已满，无法插入!"<<endl;
+                return 0;
+            }
+            else
+            {
+                S->stack[S->top] = x;
+                S->top ++;
+                return 1;
+            }
+        }
+    4)出栈:
+        int StackPop(SeqStack *S, DataType *d)
+        {
+            if(S->top <= 0)
+            {
+                cout<<"堆栈已空无数据元素出栈!"<<endl;
+                return 0;
+            }
+            else
+            {
+                S->top--;
+                *d = S->stack(S->top);
+                return 1;
+            }
+        }
+    5)取栈顶元素
+        int StackTop(SeqStack *S, DataType *d)
+        {
+            if(S->top <=0)
+            {
+                cout<<"堆栈已空"<<endl;
+                return 0;
+            }
+            else
+            {
+                *d = S->stack(S.top-1);
+                return 1;
+            }
+        }
+```
+    顺序堆栈所有操作的时间复杂度均为O(1)。
+
+    链式存储结构的堆栈称作链式堆栈。
+
+    堆栈有两端，插入元素和删除元素的一端为栈顶。另一端为栈底。对链式堆栈来说，若把靠近头指针的一端定义为栈顶，则插入元素和删除元素时不需要遍历整个链。其时间复杂度为O(1)。否则，若把远离头指针的一端为栈顶，则每次插入元素和删除元素时都需要遍历整个链。其时间复杂度为O(n)。
+
+```
+链式堆栈结点的结构体定义:
+    typedef struct 
+    {
+        DataType data;
+        struct snode *next;
+    }LSNode;
+带头结点链式堆栈操作的实现:
+    1)初始化:
+        void StackInitiate(LSNode **head)
+        {
+            *head = (LSNode *)malloc(sizeof(LSNode));
+            (*head)->next = NULL;
+        }
+    2)非空否:
+        int StackNotEmpty(LSNode *head)
+        {
+            if(head->next == NULL)
+                return 0;
+            else
+                return 1;
+        }
+    3)入栈:
+        void StackPush(LSNode *head, DataType x)
+        {
+            LSNode *p;
+            p = (LSNode *)malloc(sizeof(LSNode));
+            p->data = x;
+            p->next = head->next;
+            head->next = p;
+        }
+    4)出栈:
+        int StackPop(LSNode *head, DataType *d)
+        {
+            LSNode *p = head->next;
+            if(p == NULL)
+            {
+                cout<<"堆栈已空出错"<<endl;
+                return 0;
+            }
+            head->next = p->next;
+            *d = p->data;
+            free(p);
+            return 1;
+        }
+    5)取栈顶数据元素
+        int StackTop(LSNode *head, DataType *d)
+        {
+            LSNode *p = head->next;
+            if(p == NULL)
+            {
+                cout<<"堆栈已空出错"<<endl;
+                return 0;
+            }
+            *d = p->data;
+            return 1;
+        }
+    6)撤销动态申请空间:
+        void Destroy(LSNode *head)
+        {
+            LSNode *p, *tmp;
+            p = head;
+            while(p!=NULL)
+            {
+                tmp = p;
+                p = p->next;
+                free(tmp);
+            }
+        }
+```
+    链式堆栈所有操作的时间复杂度均为O(l)。
+
+## 3.2 队列
+
+    队列是一种特殊的线性表,队列的数据元素及数据元素之间的逻辑关系和线性表的完全相同，其差别是线性表允许在任意插入和删除数据元素。而队列只允许在其一端进行插入操作，在其另一端进行删除操作。
+
+    队列中允许进行插入操作的一端称为队尾，允许进行删除操作的一端称为队头。队头和队尾分别队头指示器（或称队头指针）和队尾指示器（或队尾指针）。队列的插入操作通常称作入队列，队列的删除操作通常称作出队列。
+
+    根据队列的定义，每次入队列的数据元素都放在原来的队尾数据元素之后称为新的队尾元素，每次出队列的数据元素都是原来队头元素。故而最先入队列的数据元素总是最先出队列。所以队列是一种先进先出的线性表，简称先进先出表。
+
+
+
+
+
+
+    
+    
+    
+   一棵树最上面的节点称为根节点。
 
 	若一个节点由连接多个节点，那么该节点称为父节点，它的多个节点称为子节点。
 

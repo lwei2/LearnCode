@@ -1,0 +1,18 @@
+1.函数原型:extern int strcmp(const char *str1, const char *str2,size_t n);
+    功能:比较两个字符串
+    参数:str1-比较字符串1，str2-比较字符串2,n-要比较的字符数
+    返回值:当str1与str2的前n个字符相同，则返回0；
+           当str1>str2,返回正数；
+           当str1<str2,返回负数。
+2.函数的实现 
+int strcmp(const char *str1,const char *str2)
+{
+	while(*str1==*str2)
+	{
+		if(*str1=='\0')
+			return 0;
+		str1++;
+		str2++;
+	}
+	return *str1-*str2;
+}

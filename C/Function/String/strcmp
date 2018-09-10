@@ -1,6 +1,8 @@
 1.函数原型:extern int strcmp(const char *str1, const char *str2)
+    功能:比较两个字符串
+    参数:str1-比较字符串1，str2-比较字符串2
     返回值:当str1 == str2 ,返回0；当str1>str2,返回正数；当str1<str2,返回负数
-2.函数源码    
+2.函数的实现 
 int strcmp(const char *str1,const char *str2)
 {
 	while(*str1==*str2)
