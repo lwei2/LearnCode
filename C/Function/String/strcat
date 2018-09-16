@@ -1,3 +1,9 @@
+1.函数原型:extern char *strcat(char *dest,const char *src);
+    功能:将src所指向字符串(包括'\0')复制到dest所指向的字符串后面(删除*dest原来尾末的'\0')。
+    参数:dest-指向目标数组或字符串
+         src-指向要追加的字符串
+    返回值:char *,返回一个指向最终目标字符串的指针。
+2.函数的实现:
 char *strcat(char *dest,char *src)
 {
 	char *t =dest;

@@ -2,7 +2,8 @@
     功能:比较两个字符串
     参数:str1-比较字符串1，str2-比较字符串2
     返回值:当str1 == str2 ,返回0；当str1>str2,返回正数；当str1<str2,返回负数
-2.函数的实现 
+2.函数的实现
+#define
 int strcmp(const char *str1,const char *str2)
 {
 	while(*str1==*str2)
@@ -14,3 +15,16 @@ int strcmp(const char *str1,const char *str2)
 	}
 	return *str1-*str2;
 }
+#else
+int strcmp(const char *str1, const char *str2)
+{
+    assert(str1!=NULL&&str2!=NULL);
+    int result = 0;
+    while(!(result=*(unsigned char *)str1 - *(unsigned char*)str2)&& *str2)
+    {
+        str1++;
+        str2++;
+    }
+    return result;
+}
+#endif

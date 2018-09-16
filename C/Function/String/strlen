@@ -15,7 +15,7 @@
 #else
     int strlen(char *src)
     {
-      if(*src==NULL)
+      if(*src=='\0')
           return 0;
       else
           return (1+strlen(++src));
