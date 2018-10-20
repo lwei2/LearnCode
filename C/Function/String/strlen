@@ -12,12 +12,14 @@
           len++;
     return len;
    }
-#else
+#elif
     int strlen(char *src)
     {
-      if(*src=='\0')
+      if(src=='\0')
           return 0;
       else
           return (1+strlen(++src));
     }
+#else
+	return *src ? strlen(src+1)+1:0;
 #endif

@@ -22,27 +22,5 @@ void *memcpy(void *dest,const void *src,size_t n)
 }
 
 #else
-void *memcpy(void *dest,const void *src,int n)
-{
-    if(dest==NULL||src==NULL||n<=0)
-        return NULL;
-    char *d = (char *)dest;
-    const char *s = (const char *)src;
-    if(d>s && d<s+n)
-    {
-        d = d+n-1;
-        s = s+n-1;
-        while(n--)
-            *d--=*s--;
-    }
-    else
-    {
-        while(n--)
-        {
-            *d++=*s++;
-        }
-    }
-    return dest;
-}
 
 #endif

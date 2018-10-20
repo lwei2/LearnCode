@@ -44,4 +44,5 @@ MySQL常用操作
 
 C++/C编译mysql
 	g++/gcc source_code.cpp -o source_name -I/usr/include/mysql -lmysqlclient
+	
 
