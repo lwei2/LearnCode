@@ -1,11 +1,13 @@
 #########################################################################
-# File Name: demo1.sh
+# File Name: expr1.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
 # The Description:
 #########################################################################
-#!/bin/bash
-value=58
-echo ${value}
-unset value
-echo $value
+#/bin/bash
+read x
+echo "x=$x"
+read y
+echo "y=$y"
+sum=`expr $x - $y`
+echo "sum=x-y=$sum"

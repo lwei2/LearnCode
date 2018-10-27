@@ -16,3 +16,14 @@
       (5)重新启动
 
 	#reboot
+
+	#sudo apt-get install gnome-tweak-tool   #安装tweak
+	#sudo apt-get install gnome-shell-extensions -y  #安装shell扩展
+	#sudo apt install chrome-gnome-shell     #为了能在浏览器内安装gnome插件，火狐和谷歌都能用
+	#sudo apt-get install gtk2-engines-pixbuf    #防止GTK2错误
+	#sudo apt install libxml2-utils
+
+	download :https://www.gnome-look.org/ord/top
+	mv the themes file to /usr/share/themes/or ~/.themes
+	tweak choose the themes
+
