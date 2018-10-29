@@ -1,5 +1,6 @@
 1.添加搜狗源并更新软件
-	#sudo add-apt-repository ppa:fcitx-team/nightly
+	#sudo add-apt-repository ppa:fcitx-team/nightly //error delete
+	
 	#sudo apt-get update
 2.安装fcitx
 	#sudo apt-get install fcitx
