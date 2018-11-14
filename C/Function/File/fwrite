@@ -1,0 +1,7 @@
+1.函数原型:size_t *fwirte(const void *ptr,size_t size, size_t nmemb,FILE *stream);
+    功能:向指定的文件中写入若干数据块
+    参数:ptr -  要获取数据的地址
+		 size - 要写入内容的单字节数
+		 nmemb - 写入size字节的数据项的个数
+		 stream - 目标文件指针 
+	返回值: 返回实际写入的数据项个数count

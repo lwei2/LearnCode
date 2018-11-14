@@ -1,0 +1,6 @@
+1.函数原型:int *fseek(FILE *stream,long offset, int whence);
+    功能: 重定位流(数据流/文件)上的文件内部位置指针
+    参数:stream - 文件指针stream  
+		 offset - 偏移量
+		 whence - 起始位置
+	返回值:成功，返回0，失败返回-1，并设置error的值，可以用perror()函数输出错误。
