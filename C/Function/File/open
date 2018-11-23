@@ -1,0 +1,6 @@
+1.函数原型:
+	int open(const char *pathname, int flags, mode_t mode);
+        int open(const char *pathname, int flags);
+    功能:打开文件。
+    参数:filename - 打开的文件路径及文件名 
+

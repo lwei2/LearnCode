@@ -1,0 +1,6 @@
+1.函数原型:int fflush(FILE *stream);
+    功能:强迫将缓冲区内的数据写回参数stream指定的文件中。
+    参数:stream - 要冲洗的流
+	函数返回值:成功返回0，失败返回EOF,错误代码存于errno中。
+
+
