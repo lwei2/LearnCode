@@ -1,4 +1,4 @@
-常用的网站:
+IT常用的网站:
 1.Github:				https://github.com
 2.CSDN:					https://www.csdn.net/	
 3.csdn知识库：			http://lib.csdn.net/home

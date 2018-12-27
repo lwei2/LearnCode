@@ -1,4 +1,4 @@
-1.9*9
+1.9*9乘法口诀
 	int i,j;
 	for(i=1;i<=9;i++)
 	{
@@ -9,7 +9,25 @@
 		printf("\n");	
 	}
 
-2.写出String的构造函数，拷贝构造函数，赋值函数以及析构函数。
+2.
+int strlen(const char *src)
+{
+#ifdef
+	int len = 0;
+	assert(src!=NULL);
+	while(*src++!='\0')
+		len++;
+	return len;
+#else
+	if(*src == '\0')
+		return 0;
+	else
+		return (1+strlen(++src));
+#endif
+}
+char *strcpy(char *dest, char *src);
+
+写出String的构造函数，拷贝构造函数，赋值函数以及析构函数。
 class String
 {
 	public:

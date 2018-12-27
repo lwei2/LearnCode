@@ -119,16 +119,12 @@ string::find
 	3.size_t find(const char* s, size_t pos, size_type n) const;
 	4.size_t find(char c, size_t pos = 0) const noexcept;
 
-	
-
 
 string::find_first_not_of
 	1.size_t find_first_not_of(const string& str, size_t pos = 0) const noexcept;
 	2.size_t find_first_not_of(const char* s, size_t pos = 0) const;
 	3.size_t find_first_not_of(const char* s, size_t pos, size_t n) const;
 	4.size_t find_first_not_of(char c, size_t pos = 0) const noexcept;
-
-
 
 
 string::find_first_of
