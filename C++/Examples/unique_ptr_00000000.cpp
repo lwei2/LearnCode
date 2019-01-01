@@ -1,26 +1,21 @@
 /*************************************************************************
-    > File Name: Calculator.cpp
+    > File Name: unique_ptr_00000000.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
  ************************************************************************/
 
 #include<iostream>
+#include<memory>
 
 using namespace std;
 
-
-int add(int x, int y)
-{
-	cout<<"Running calculator ..."<<endl;
-	return x+y;
-}
-
 int main(void)
 {
-	cout<<"What is 876+5309?"<<endl;
-	cout<<"the sum is "<<add(876,5309)<<endl;
-	cout<<"What is 777+9311?"<<endl;
-	cout<<"the sum is "<<add(777,9311)<<endl;
+	std::unique_ptr<int> uptr(new int(10));
+	std::unique_ptr<int> uptr1 = std::move(uptr);
+	uptr1.release();
 	return 0;
 }
+
+
