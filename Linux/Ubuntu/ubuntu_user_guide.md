@@ -27,3 +27,32 @@
 	mv the themes file to /usr/share/themes/or ~/.themes
 	tweak choose the themes
 
+
+
+
+	1.check the ubuntu bytes
+		#getconf LONG_BIT
+		#uname -a
+		#dpkg --print-architecture
+
+
+
+
+
+
+support 32bytes and 64bytes
+1.
+	#dpkg --print-architecture
+2. 
+	#dpkg --print-foreign-architectures
+3.
+
+	#sudo dpkg --add-architecture i386
+	#sudo apt-get update
+	#sudo apt-get dist-upgrade
+
+4.
+	#sudo apt-get install gcc-multilib g++-multilib
+
+
+
