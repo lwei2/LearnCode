@@ -6,13 +6,14 @@
  ************************************************************************/
 
 #include<iostream>
+#include<vector>
 
 using namespace std;
 
 class Solution
 {
 public:
-	bool Find(int target, vector<vector<int> >array)
+	bool Find1(int target, vector<vector<int> >array)
 	{
 		int rowCount = array.size();
 		int colCount = array[0].size();
@@ -33,9 +34,62 @@ public:
 		}
 		return false;
 	}
+	bool Find2(int target,vector<int> > array)
+	{
+		if(array.empty())
+			return false;
+		int length = array.size();
+		for(int i = 0; i < length; i++)
+		{
+			if(array[i].empty())
+				continue;
+			else if(target >= array[i][0])
+			{
+				if(target <= array[i][array[i].size() - 1])
+				{
+					for(int j = array[j].size() - 1; j >= 0;j--)
+					{
+						if(target == array[i][j])
+							return 1;
+						else if(target > array[i][j])
+							break;
+					}
+				}
+				else
+					continue;
+			}
+			else
+				return false;
+		}
+		return false;
+	}
 };
 
 int main(void)
 {
+	Solution pro;
+	vector<vector<int> > s(5);
+	for(int i = 0; i < s.size(); i++)
+		s[i].resize(5);
+	for(int i = 0; i < s.size(); i++)
+	{
+		for(int j = 0; j < s[0].size(); j++)
+		{
+			s[i][j] = i+j;
+		}
+	}
+	for(int i = 0; i < s.size(); i++)
+	{
+		for(int j = 0; j < s[0].size(); j++)
+		{
+			cout<<s[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+	if(pro.Find1(100,s))
+		cout<<"true"<<endl;
+	else
+		cout<<"false"<<endl;
+
 	return 0;
 }

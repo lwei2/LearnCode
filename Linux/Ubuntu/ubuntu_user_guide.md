@@ -56,3 +56,8 @@ support 32bytes and 64bytes
 
 
 
+Ubuntu清理升级缓存以及无用包
+	#sudo apt-get autoclean
+	#sudo apt-get clean
+	#sudo apt-get autoremove
+
