@@ -48,6 +48,22 @@ class Solution
 					return false;
 			return true;
 		}
+		bool checkSam3(string stringA, string stringB)
+		{
+			if(stringA.size() != stringB.size())
+				return false;
+			char strA[256] = {0};
+			char strB[256] = {0};
+			for(int i = 0, j = 0; i < stringA.size(), j < stringB.size(); i++,j++)
+			{
+				strA[stringA[i]]++;
+				strB[stringB[j]]++;
+			}
+			for(int i = 0; i < 256; i++)
+				if(strA[i] != strB[i])
+					return false;
+			return true;
+		}
 };
 
 
