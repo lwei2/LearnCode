@@ -1,22 +1,27 @@
 /*************************************************************************
-    > File Name: fwrite.c
+    > File Name: sscanf_0001.c
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
  ************************************************************************/
 
 #include<stdio.h>
+
 int main(void)
 {
-	FILE *pFile = NULL;
-	char buffer[] = {'x', 'y', 'z'};
-	pFile = fopen("myfile.bin", "wb");
-	if(NULL == pFile)
-	{
-		printf("open the file failed!\n");
-		return -1;
-	}
-	fwrite(buffer, sizeof(char), sizeof(buffer), pFile);
-	fclose(pFile);
+	char buf[1024];
+	sscanf("123456","%s",buf);
+	printf("buf:%s\n",buf);
+
+	char buf1[1024];
+	sscanf("123456","%4s",buf1);
+	printf("buf1:%s\n",buf1);
+
+	char buf2[1024];
+	sscanf("hello world", "%s",buf2);
+	printf("buf2:%s\n",buf2);
+
+
+
 	return 0;
 }

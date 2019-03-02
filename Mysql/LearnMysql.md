@@ -44,5 +44,22 @@ MySQL常用操作
 
 C++/C编译mysql
 	g++/gcc source_code.cpp -o source_name -I/usr/include/mysql -lmysqlclient
-	
+
+
+
+MySQL for Linux/Ubuntu/CentOS
+0.show the version of mysql;
+#select version();
+1.show the databases;
+#show databases;
+2.use the databases;
+#use [database_name];
+3.show the tables;
+#show tables;
+4.create the tables;
+#create table table_name(column1 value,...);
+#show engines;
+#select host,user from mysql.user;
+
+
 
