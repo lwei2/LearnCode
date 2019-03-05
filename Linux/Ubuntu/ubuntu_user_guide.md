@@ -1,3 +1,5 @@
+#Ubuntu
+
 1.重置桌面到初始状态
       (1)打开终端,安装gnome-tweak-tool工具
 
@@ -34,10 +36,6 @@
 		#getconf LONG_BIT
 		#uname -a
 		#dpkg --print-architecture
-
-
-
-
 
 
 support 32bytes and 64bytes
