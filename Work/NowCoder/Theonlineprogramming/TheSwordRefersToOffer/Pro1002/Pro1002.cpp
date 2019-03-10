@@ -21,11 +21,10 @@ struct ListNode
 class Solution
 {
 	public:
-		vector<int> printListFromTailToHead(ListNode *head)
+		vector<int> printListFromTailToHead1(ListNode *head)
 		{
 			stack<int>nodes;
 			vector<int>ArrayList;
-			ListNode　*p = head;
 			while(head!=NULL)
 			{
 				nodes.push(head->val);
@@ -37,6 +36,24 @@ class Solution
 				nodes.pop();
 			}
 			return ArrayList;
+		}
+		vector<int> printListFromTailToHead2(ListNode *head)
+		{
+			vector<int> result;
+			stack<int>nodes;
+			ListNode *p = head;
+			while(p!=NULL)
+			{
+				nodes.push(p->val);
+				p = p->next;
+			}
+			int len = nodes.size();
+			for(int i = 0; i < len; i++)
+			{
+				result.push_back(nodes.top());
+				nodes.pop();
+			}
+			return result;
 		}
 };
 

@@ -48,6 +48,10 @@ C++/C编译mysql
 
 
 MySQL for Linux/Ubuntu/CentOS
+	1.查看mysql服务器是否启动
+		#ps aux|grep mysql
+	2.查看数据库端口
+		mysql>show global variables like 'port';
 0.show the version of mysql;
 #select version();
 1.show the databases;
