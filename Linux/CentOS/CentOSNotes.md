@@ -1,5 +1,20 @@
 #CentOS
 
+
+
+
+1.安装vim
+	#yum search vim
+	#rpm -qa|grep vim
+	#yum -u install vim*
+	#vim --version
+2.设置vim
+	#set nu  //设置显示行号
+	#set showmode //设置在命令行界面最下面显示当前模式等
+	#set ruler //设置在右下角显示光标所在的行数等信息
+	#set autoindent //设置每次单机enter后，光标移动到
+	#syntax on //设置语法检测，
+
 1.常用的linux命令
 	1.1 返回上一级目录
 		#cd ..

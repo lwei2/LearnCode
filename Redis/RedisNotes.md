@@ -1,7 +1,5 @@
-
-安装Redis
-==========
-	安装步骤如下：
+#redis
+1.Redis安装
 	1.#sudo apt-get install update
 	2.#sudo apt-get install redis-server
 
