@@ -1,5 +1,5 @@
 #########################################################################
-# File Name: echo.sh
+# File Name: echo_0000.sh
 # Author: lwei
 # mail: lwei@IT.com
 # Description:输出不同颜色的字

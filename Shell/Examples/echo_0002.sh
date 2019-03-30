@@ -1,22 +1,12 @@
 #########################################################################
-# File Name: for.sh
+# File Name: echo_0002.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
 # The Description:
 #########################################################################
-#/bin/bash
-a=10
-b=20
-if [ $a == $b ]
-then
-	echo "a == b"
-elif [ $a -gt $b ]
-then
-	echo "a > b"
-elif [ $a -lt $b ]
-then
-	echo "a < b"
-else
-	echo "a ? b"
-fi
+#!/bin/bash
+echo "4*0.56" | bc
+no=54
+result=`echo "$no * 1.5" | bc`
+echo $result
 

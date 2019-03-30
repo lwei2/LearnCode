@@ -2,7 +2,7 @@
 Shell Demo
 --------------------------------------------
 1.HelloWorld.sh|	显示HelloWorld
-2.echo.sh      |	显示不同颜色的字
+2.echo_0000.sh |	显示不同颜色的字
 3.demo.sh      | 	打印变量
 4.demo1.sh     | 	删除变量
 5.str.sh       | 	输出单引号字符串

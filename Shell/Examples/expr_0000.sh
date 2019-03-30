@@ -1,16 +1,12 @@
 #########################################################################
-# File Name: if1.sh
+# File Name: expr_0000.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
 # The Description:
 #########################################################################
-#/bin/bash
-num1=$[2*3]
-num2=$[1+5]
-if test $[num1] -eq $[num2]
-then
-	echo 'num1 == num2'
-else
-	echo 'num1 != num2'
-fi
-
+#!/bin/bash
+read x
+read y
+echo "x=$x,y=$y"
+sum=`expr $x + $y`	
+echo "sum=x+y=$sum"

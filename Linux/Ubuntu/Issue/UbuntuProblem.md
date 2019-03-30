@@ -17,4 +17,9 @@
 	c)在倒数第四行，删除recovery nnomodeset
 	d)然后在删除后天就quiet splash rw init=/bin/bash,并按F10，启动
 	e)系统进入root mode，输入passwd直接重置密码
+4.ubuntu突然不能上网
+	#sudo service network-manager stop
+	#sudo rm /var/lib/NetworkManager/NetworkManager.state
+	#sudo service network-manager start
+
 

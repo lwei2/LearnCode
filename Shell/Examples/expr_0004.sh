@@ -1,11 +1,12 @@
 #########################################################################
-# File Name: test2.sh
+# File Name: expr_0004.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
 # The Description:
 #########################################################################
 #/bin/bash
-
-. ./test1.sh
-
-echo "test1 : $url"
+read x
+read y
+echo "x=$x,y=$y"
+sum=`expr $x / $y`
+echo "sum=x/y=$sum"
