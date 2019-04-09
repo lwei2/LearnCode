@@ -14,3 +14,5 @@
 ### model14: 职责链模式例子
 ### model15: 观察者模式例子
 ### model16: 状态模式例子
+### 单例模式	Singleton 
+### 工厂模式	Factory

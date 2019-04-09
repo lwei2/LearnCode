@@ -10,6 +10,7 @@
 #include "SingletonB.h"
 
 Singleton *Singleton::singleton = NULL;
+
 Singleton *Singleton::GetInstance(const char *name)
 {
 	if(singleton == NULL)

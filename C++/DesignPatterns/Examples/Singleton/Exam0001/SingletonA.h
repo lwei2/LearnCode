@@ -4,17 +4,29 @@
     > Mail: lwei2@IT.com 
     > The Description: 
  ************************************************************************/
+
+#ifndef __SINGLETONA_H__
+#define __SINGLETONA_H__
+
+#include <iostream>
 #include "Singleton.h"
-class SingletonA:public Singleton
+
+using namespace std;
+
+
+class SingletonA : public Singleton
 {
-	friend classs Singleton;
+	friend class Singleton;
   public:
 	void Show()
 	{
 		cout<<"SingletonA"<<endl;
 	}
   private:
-	SingletonA(){};
+	SingletonA()
+	{
 
+	}
 };
 
+#endif //__SINGLETONA_H__

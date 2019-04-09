@@ -1,14 +1,17 @@
 /*************************************************************************
-    > File Name: main.cpp
+    > File Name: Singleton.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
-    > The Description: 
+    > The Description :
  ************************************************************************/
 
 #include "Singleton.h"
-int main(void)
+
+Singleton *Singleton::p = nullptr;
+
+Singleton* Singleton::instance()
 {
-  	Singleton *st = Singleton::GetInstance("SingletonA");
-	st->Show();
-	return 0;
+	if(nullptr == p)
+		p = new Singleton();
+	return p;
 }
