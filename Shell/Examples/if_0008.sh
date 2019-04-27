@@ -1,11 +1,11 @@
 #########################################################################
-# File Name: echo_0001.sh
+# File Name: if_0008.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
-# The Description:显示一些信息
+# The Description:
 #########################################################################
 #!/bin/bash
-#echo the message
-fruit=apple
-count=5
-echo "We have $count ${fruit}(s)"
+file=if_0008.sh
+if [ -f $file ];then
+	echo "the file is exist"
+fi

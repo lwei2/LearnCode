@@ -1,11 +1,15 @@
 #########################################################################
-# File Name: echo_0001.sh
+# File Name: if_0009.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
-# The Description:显示一些信息
+# The Description:
 #########################################################################
 #!/bin/bash
-#echo the message
-fruit=apple
-count=5
-echo "We have $count ${fruit}(s)"
+str="root"
+if [ $str == "root" ]
+then
+	echo "yes"
+fi
+if [ -n $str ];then
+	echo "$str is not null"
+fi
