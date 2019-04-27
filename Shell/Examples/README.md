@@ -1,11 +1,18 @@
 # Shell
 ## Shell Demo
+文件名				|		功能
 --------------------------------------------
-1.HelloWorld.sh|	显示HelloWorld
-
-
-
+1.HelloWorld.sh|	|		显示HelloWorld
+2.ninenine.sh		|		9*9乘法口诀
+3.triangle.sh		|		打印等腰三角形
+4.chess.sh			|		显示国际象棋
+5.loginlog.sh		|		显示某个用户的登录记录
+sum_0000.sh			|		求和1到100
+sum_0001.sh			|		求和1到n
+sum_0002.sh			|		求100以内所有能被3整除的数之和
 createuser.sh		|		创建用户
+checkint.sh			|		判断输入参数是否为整数
+
 
 ### echo
 0.echo_0000.sh		|		显示不同颜色的字
@@ -40,9 +47,31 @@ createuser.sh		|		创建用户
 10.if_0010.sh		|	
 
 ### for
+0.for_0000.sh		|		循环打印数组值
+1.for_0001.sh		|		循环打印字符串
+2.for_0002.sh		|		循环打印数组值
+3.for_0003.sh		|		求50内的奇数值	
+
+
+### while
+0.while_0000.sh		|		1到5的累加
+1.while_0001.sh		|		判断某个网址是否正确
+2.while_0002.sh		|		求100以内所欲奇数之和
+3.while_0003.sh		|		求随机值中最大最小值
+4.while_0004.sh		|		循环左移
+
+### until	
+0.until_0000.sh		|		求10以内某个数自增
+1.until_0001.sh		|		猜数字范围
+
+
+### case 
+1.case_0000.sh		|		判断输入数字1到4
+2.case_0001.sh		|		判断输入是yes还是no
 
 
 ### expr
+
 
 ### print
 

@@ -1,10 +1,11 @@
 #########################################################################
-# File Name: for2.sh
+# File Name: while_0004.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
 # The Description:
 #########################################################################
-#/bin/bash
-for((i=1;i<=5;i++));do
-	echo "$i"
-done;
+#!/bin/bash
+while (( $# > 0));do
+	echo $*
+	shift
+done

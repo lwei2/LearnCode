@@ -1,12 +1,10 @@
 #########################################################################
-# File Name: for1.sh
+# File Name: for_0002.sh
 # Author: lwei2
 # Mail: lwei2@IT.com
 # The Description:
 #########################################################################
 #/bin/bash
-for str in 'this is a string'
-do
-	echo $str
-done
-
+for((i=1;i<=5;i++));do
+	echo "$i"
+done;
