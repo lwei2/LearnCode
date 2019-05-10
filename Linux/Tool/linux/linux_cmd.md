@@ -49,5 +49,8 @@ ubuntu添加或删除ppa源
 				  #cd /ect/apt/sources.list.d
 				  #rm -rf ppa源保存保存文件
 				  #sudo apt-get update
+sudo dpkg -i wps-office_10.1.0.6634_amd64.deb
 
-		
+http://community.wps.cn/download/
+
+	

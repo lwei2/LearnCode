@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: setw_0000.cpp
+    > File Name: fprintf_0000.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
@@ -7,13 +7,17 @@
 
 
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
+#define LOG(...) { \
+	fprintf(stderr, "%s : Line: %d:\t", __FILE__, __LINE__); \
+	fprintf(stderr, __VA_ARGS__);\
+	fprintf(stderr, "\n"); \
+}
+
 int main(void)
 {
-	cout<<std::setw(10);
-	cout<<77<<endl;
+	LOG("%s", "No Err!");
 	return 0;
 }

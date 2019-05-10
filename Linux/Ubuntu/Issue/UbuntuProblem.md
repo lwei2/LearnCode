@@ -21,5 +21,9 @@
 	#sudo service network-manager stop
 	#sudo rm /var/lib/NetworkManager/NetworkManager.state
 	#sudo service network-manager start
-
-
+5.提示:dpkg was interrupted, you must manually run 'dpkg --configure -a' to correct the problem.
+	# sudo rm /var/lib/apt/lists/lock
+	# sudo rm /var/cache/apt/archives/lock
+	# cd /var/lib/dpkg/updates
+	# sudo rm *
+	# sudo apt-get update
