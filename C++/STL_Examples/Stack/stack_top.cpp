@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: fprintf_0000.cpp
+    > File Name: stack_top.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
@@ -7,17 +7,19 @@
 
 
 #include <iostream>
-
+#include <stack>
 using namespace std;
-
-#define LOG(...) { \
-	fprintf(stderr, "%s : Line: %d:\t", __FILE__, __LINE__); \
-	fprintf(stderr, __VA_ARGS__);\
-	fprintf(stderr, "\n"); \
-}
 
 int main(void)
 {
-	LOG("%s", "No Err!");
+	std::stack<int> mystack;
+	mystack.push(10);
+	mystack.push(20);
+
+	mystack.top() -= 5;
+	cout<<"the top elements is :"<<mystack.top()<<endl;
+
+
 	return 0;
 }
+

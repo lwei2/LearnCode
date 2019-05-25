@@ -59,3 +59,8 @@ Ubuntu清理升级缓存以及无用包
 	#sudo apt-get clean
 	#sudo apt-get autoremove
 
+Ubuntu忘记root密码
+	1.若有root权限，即用passwd修改即可
+	2.通过重启按shift选择Advanced options for Ubuntu，
+	再选择recovery mode，按e，选择删除recovery nomodeset，
+	并添加quiet splash rw init=/bin/bash，最后按F10，输入passwd进行修改即可。

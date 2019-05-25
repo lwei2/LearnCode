@@ -15,11 +15,16 @@ int main(void)
 	myvector.emplace_back(100);
 	myvector.emplace_back(200);
 	cout<<"myvector contains:";
+#if 0
 	vector<int>::iterator iter;
 	for(iter=myvector.begin();iter!=myvector.end();iter++)
 	  	cout<<*iter<<'\t';
 	cout<<endl;
-
+#else
+	for(auto& x : myvector)
+		std::cout<<" "<<x;
+	cout<<endl;
+#endif
 	return 0;
 }
 

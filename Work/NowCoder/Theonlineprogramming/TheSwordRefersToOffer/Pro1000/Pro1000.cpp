@@ -15,8 +15,11 @@ class Solution
 public:
 	bool Find1(int target, vector<vector<int> >array)
 	{
+		if(array.empty())
+			return false;
 		int rowCount = array.size();
 		int colCount = array[0].size();
+		cout<<"rowCount:"<<rowCount<<",colCount:"<<colCount<<endl;
 		for(int i = rowCount - 1, j = 0; i>=0 && j<colCount;)
 		{
 			if(target == array[i][j])
@@ -34,7 +37,7 @@ public:
 		}
 		return false;
 	}
-	bool Find2(int target,vector<int> > array)
+	bool Find2(int target, vector<vector<int> >array)
 	{
 		if(array.empty())
 			return false;
@@ -81,14 +84,36 @@ public:
 		}
 		return false;
 	}
+	bool Find4(int target, vector<vector<int> >array)
+	{
+		if(array.empty())
+			return false;
+		int rows = array.size();
+		int cols = array[0].size();
+		int left = 0, right = rows * cols - 1;
+		int mid,i,j;
+		while(left <= right)
+		{
+			mid = left + (right - left)/2;
+			i = mid / cols;
+			j = mid % cols;
+			if(array[i][j] < target)
+				left = mid + 1;
+			else if(array[i][j] > target)
+				right = mid - 1;
+			else
+				return false;
+		}
+		return false;
+	}
 };
 
 int main(void)
 {
 	Solution pro;
-	vector<vector<int> > s(5);
+	vector<vector<int> > s(4);
 	for(int i = 0; i < s.size(); i++)
-		s[i].resize(5);
+		s[i].resize(2);
 	for(int i = 0; i < s.size(); i++)
 	{
 		for(int j = 0; j < s[0].size(); j++)

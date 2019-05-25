@@ -1,8 +1,7 @@
 #CentOS
+## CentOS安装
 
-
-
-
+## CentOS常用软件安装
 1.安装vim
 	#yum search vim
 	#rpm -qa|grep vim
@@ -15,6 +14,7 @@
 	#set autoindent //设置每次单机enter后，光标移动到
 	#syntax on //设置语法检测，
 
+## CentOS常用命令
 1.常用的linux命令
 	1.1 返回上一级目录
 		#cd ..
@@ -78,4 +78,11 @@
 		#fine -type f -print0 | xargs -r0 grep -F 'expr' //在当前目录及其子目录所有.c和.h文件中查找'expr'
 		#fine -maxdepth 1 -type f | xargs grep -F 'expr' //在当前目录中查找expr
 
-
+## CentOS 常见问题
+	1.进入单用户模式
+		1.1 重启服务器，在选择内核界面使用上下箭头移动
+		1.2 选择内核并按e
+		1.3 找到 linux16 /boot/vmlinuz-xxxxxx ro xxx LANG=en_US.UTF-8
+		1.4 删除rhgb quit 和改ro为rw
+		1.5 按ctrl+x重启即可进入
+		1.6 退出单用户命令:#exec /sbin/init

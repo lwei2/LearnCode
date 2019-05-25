@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: print_0000.cpp
+    > File Name: static_cast_0002.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
@@ -12,8 +12,12 @@ using namespace std;
 
 int main(void)
 {
-	cout<<__STDC_HOSTED__<<endl;
-	cout<<__STDC__<<endl;
-	cout<<__func__<<endl;
+	char c;
+	int i = 0;
+	do{
+		c = cin.get();
+		cout<<++i<<" : "<<
+			static_cast<int>(c)<<endl;
+	}while(c!='q');
 	return 0;
 }
