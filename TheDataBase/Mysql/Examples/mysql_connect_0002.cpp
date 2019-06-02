@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: mysql_connect1.cpp
+    > File Name: mysql_connect_0002.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description: 

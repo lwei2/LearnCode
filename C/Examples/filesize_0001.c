@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	FILE *fp = fopen("./filesize_0000.c","r");
+	FILE *fp = fopen("./filesize_0001.c","r");
 	if(fp == NULL)
 		return -1;
 	fseek(fp, 0L, SEEK_END);
