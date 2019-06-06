@@ -1,0 +1,30 @@
+/*************************************************************************
+    > File Name: UniqueBinarySearchTrees.cpp
+    > Author: lwei2
+    > Mail: lwei2@IT.com 
+    > The Description :
+ ************************************************************************/
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Solution
+{
+	public:
+		int numTrees(int n)
+		{
+			vector<int> dp(n+1);
+			dp[0] = 1;
+			for(int i = 1; i <= n; i++)
+				for(int j = 0; j < i; j++)
+					dp[i] += dp[j] * dp[i-j-1];
+			return dp[n];
+		}
+};
+int main(void)
+{
+	return 0;
+}

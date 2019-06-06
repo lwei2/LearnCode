@@ -1,0 +1,4 @@
+ConstructBinaryTreefromProeorderandInorderTraversal:
+	g++ ConstructBinaryTreefromProeorderandInorderTraversal.cpp -o ConstructBinaryTreefromProeorderandInorderTraversal -std=c++11
+clean:
+	rm -rf ConstructBinaryTreefromProeorderandInorderTraversal
