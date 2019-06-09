@@ -63,6 +63,7 @@ This is my exercise for ACM. (progress 55/1000)
 |1053| [Entropy](http://acm.hdu.edu.cn/showproblem.php?pid=1053)
 |1054| [Strategic Game](http://acm.hdu.edu.cn/showproblem.php?pid=1054)
 |1055| [Color a Tree](http://acm.hdu.edu.cn/showproblem.php?pid=1055)
+|1056| [HangOver](http://acm.hdu.edu.cn/showproblem.php?pid=1056)
 
 
 
