@@ -49,6 +49,44 @@
 		# git logg -p <file> //查看每次详细内容的diff
 	21.查看提交统计信息
 		# git log  --stat
+	22.查看本地分支
+		# git branch
+	23.查看远程分支
+		# git branch -r
+	24.创建本地分支
+		# git branch <branch-name>
+	25.切换分支
+		# git checkout <branch-name>
+	26.创建新分支并立即切换到新分支
+		# git checkout -b <branch-name>
+	27.删除分支
+		# git branch -d <branch-name>  // -d 只删除已参与合并的分支，对未合并的分支是无法删除
+		# git branch -D <branch-name> // -D 强制删除一个分支
+	28.合并分支
+		# git merge <branch-name>
+	29.创建远程分支
+		# git push origin <branch-name>
+	30.删除远程分支
+		# git push origin:heads/[branch-name]
+		# git push origin:[branch-name]
+	31.查看版本
+		# git tag
+	32.创建版本
+		# git tag [name]
+	33.删除版本
+		# git tag -d [name]
+	34.查看远程版本
+		# git tag -r
+	35.创建远程版本(本地版本push到远程)
+		# git push origin [name]
+	36.删除远程版本
+		# git push origin:refs/tags/[name]
+	37.合并远程仓库的tag到本地
+		# git push origin --tags
+	38.上传本地tag到远程仓库
+		# git push origin --tags
+	39.创建带注释的tag
+		# git tag -a [name] -m 'comment'
 
 3.本地创建仓库，并提交代码
 ============

@@ -25,10 +25,9 @@ class Solution
 		vector<int> twoSum1(vector<int>&nums,int target)
 		{
 			vector<int> result;
-			int i,j;
-			for(i=0;i<nums.size();i++)
+			for(int i=0;i<nums.size();i++)
 			{
-				for(j=i+1;j<nums.size();j++)
+				for(int j=i+1;j<nums.size();j++)
 				{
 					if(nums[i]+nums[j]==target)
 					{
