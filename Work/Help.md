@@ -17,3 +17,26 @@
 	2.https://github.com/lwei2/json
 	3.https://github.com/lwei2/particleground
 
+# 刷题库
+	1.https://www.nowcoder.com/
+	2.http://acm.hdu.edu.cn/
+	3.https://leetcode.com/
+
+
+	https://www.codechef.com/
+	http://codeforces.com/gyms/
+	http://openjudge.cn/
+	https://open.kattis.com/
+
+	https://hihocoder.com/
+	http://acm.hrbust.edu.cn/
+	http://acm.mipt.ru/judge/
+	http://acm.hit.edu.cn/
+
+
+
+
+
+http://cstest.scu.edu.cn/
+http://judge.u-aizu.ac.jp/onlinejudge/
+
