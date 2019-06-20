@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: getline_0002.cpp
+    > File Name: ignore_0004.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
@@ -7,16 +7,14 @@
 
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main(void)
 {
-	string str;
-	while(getline(cin,str));
-	{
-		cout<<str<<"#";
-	}
+	char array[8];
+	cin.ignore(6,'a');
+	cin.getline(array,8);
+	cout<<array<<endl;
 	return 0;
 }

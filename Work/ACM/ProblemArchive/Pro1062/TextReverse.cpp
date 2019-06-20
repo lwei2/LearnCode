@@ -15,15 +15,14 @@ using namespace std;
 class Solution
 {
 	public:
-		void TextReverse(int T)
+		void TextReverse1(int T)
 		{
 			int length, count = 0;
 			string str;
 			getchar();
 			for(int i = 0; i < T; i++)
 			{
-				//getline(cin, str);
-				cin>>str;
+				getline(cin, str); //cin>>str [error]
 				length = str.size();
 				str[length] = ' ';
 				for(int j = 0; j <= length; j++)
@@ -42,6 +41,17 @@ class Solution
 			cout<<endl;
 			}
 		}
+		
+	public:
+		void TextReverse2(int T)
+		{
+			int length;
+			string str, tmp;
+			for(int i = 0; i < T; i++)
+			{
+			
+			}
+		}
 };
 
 
@@ -50,6 +60,6 @@ int main(void)
 	int T;
 	cin>>T;
 	Solution s;
-	s.TextReverse(T);
+	s.TextReverse1(T);
 	return 0;
 }
