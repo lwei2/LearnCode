@@ -64,3 +64,7 @@ Ubuntu忘记root密码
 	2.通过重启按shift选择Advanced options for Ubuntu，
 	再选择recovery mode，按e，选择删除recovery nomodeset，
 	并添加quiet splash rw init=/bin/bash，最后按F10，输入passwd进行修改即可。
+
+Ubuntu18.04升级19.04
+	# sudo apt-get update && sudo apt full-upgrade
+	# update-manager -c
