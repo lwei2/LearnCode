@@ -2,6 +2,7 @@ LeetCode
 =====================================================
 This is my exercise for leetcode. (progress 58/210)
 =====================================================
+
 ## Problems
 
 | Number | Title | Solution | Difficulty |
@@ -13,27 +14,27 @@ This is my exercise for leetcode. (progress 58/210)
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring) | C++ | Medium |
 |6|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion) | C++ | Medium |
 |7|[Reverse Integer](https://leetcode.com/problems/reverse-integer) | C++ | Easy |
-|8|[String to Integer](https://leetcode.com/problems/string-to-integer) | C++ | Easy |
+|8|[String to Integer(atoi)](https://leetcode.com/problems/string-to-integer-atoi) | C++ | Medium |
 |9|[Palindrome Number](https://leetcode.com/problems/palindrome-number) | C++ | Easy |
-|10|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching) | C++ | Hard |  
-|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water)| C++ | Medium |
-|12|[Integer to Roman](https://leetcode.com/problems/integer-to-roman)| C++ | Medium |
-|13|[Roman to Integer](https://leetcode.com/problems/roman-to-integer)| C++ | Easy |
+|10|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching) | C++ | Hard |
+|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water) | C++ | Medium |
+|12|[Integer to Roman](https://leetcode.com/problems/integer-to-roman) | C++ | Medium |
+|13|[Roman to Integer](https://leetcode.com/problems/roman-to-integer) | C++ | Easy |
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix) | C++ | Easy |
-|15|[3Sum](https://leetcode.com/problems/3sum) | C++ | Medium | 
+|15|[3Sum](https://leetcode.com/problems/3sum) | C++ | Medium |
 |16|[3Sum Closest](https://leetcode.com/problems/3sum-closest) | C++ | Medium |
-|17|[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | C++| Medium |
+|17|[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number) | C++ | Medium |
 |18|[4Sum](https://leetcode.com/problems/4sum) | C++ | Medium |
-|19|[Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list) | C++ | Medium |
+|19|[Remove Nth Node From End of List](https://leetcode.com/remove-nth-node-from-end-of-list) | C++ | Medium |
 |20|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses) | C++ | Easy |
 |21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) | C++ | Easy |
 |22|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses) | C++ | Medium |
-|23|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists) | C++ | Hard |
+|23|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists) | C++ | hard |
 |24|[Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs) | C++ | Medium |
 |25|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group) | C++ | Hard |
-|26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) |  C++ | Easy |
+|26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array) | C++ | Easy |
 |27|[Remove Element](https://leetcode.com/problems/remove-element) | C++ | Easy |
-|28|[Implement strStr](https://leetcode.com/problems/inplement-strstr) | C++ | Easy |
+|28|[Implement strStr()](https://leetcode.com/problems/implement-strstr) | C++ | Easy |
 |29|[Divide Two Integers](https://leetcode.com/problems/divide-two-integers) | C++ | Medium |
 |30|[Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words) | C++ | Hard |
 |31|[Next Permutation](https://leetcode.com/problems/next-permutation) | C++ | Medium |
@@ -45,17 +46,17 @@ This is my exercise for leetcode. (progress 58/210)
 |37|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver) | C++ | Hard |
 |38|[Count and Say](https://leetcode.com/problems/count-and-say) | C++ | Easy |
 |39|[Combination Sum](https://leetcode.com/problems/combination-sum) | C++ | Medium |
-|40|[Combination SumII](https://leetcode.com/problems/combination-sumii) | C++ | Medium |
+|40|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii) | C++ | Medium |
 |41|[First Missing Positive](https://leetcode.com/problems/first-missing-positive) | C++ | Hard |
 |42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water) | C++ | Hard |
 |43|[Multiply Strings](https://leetcode.com/problems/multiply-strings) | C++ | Medium |
-|44|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching) | C++ | Hard |
+|44|[Wildcard matching](https://leetcode.com/problems/wildcard-matching) | C++ | Hard |
 |45|[Jump Game II](https://leetcode.com/problems/jump-game-ii) | C++ | Hard |
 |46|[Permutations](https://leetcode.com/problems/permutations) | C++ | Medium |
-|47|[Permutations II](https://leetcode.com/problems/permutationsii) | C++ | Medium |
+|47|[Permutations II](https://leetcode.com/problems/permutations-ii) | C++ | Medium |
 |48|[Rotate Image](https://leetcode.com/problems/rotate-image) | C++ | Medium |
 |49|[Group Anagrams](https://leetcode.com/problems/group-anagrams) | C++ | Medium |
-|50|[Pow(x, n)](https://leetcode.com/problems/powx-n) | C++ | Medium |
+|50|[Pow(x,n)](https://leetcode.com/problems/powx-n) | C++ | Medium |
 |51|[N-Queens](https://leetcode.com/problems/n-queens) | C++ | Hard |
 |52|[N-Queens II](https://leetcode.com/problems/n-queens-ii) | C++ | Hard |
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray) | C++ | Easy |
@@ -80,7 +81,7 @@ This is my exercise for leetcode. (progress 58/210)
 |72|[Edit Distance](https://leetcode.com/problems/edit-distance) | C++ | Hard |
 |73|[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) | C++ | Medium |
 |74|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix) | C++ | Medium |
-|75|[Sort Colors](https://leetcode.com/problems/sort-colors/) | C++ | Medium |
+|75|[Sort Colors](https://leetcode.com/problems/sort-colors/) | C++ | Medium |k
 |76|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring) | C++ | Hard |
 |77|[Combinations](https://leetcode.com/problems/combinations) | C++ | Medium |
 |78|[Subsets](https://leetcode.com/problems/subsets) | C++ | Medium |
@@ -118,20 +119,73 @@ This is my exercise for leetcode. (progress 58/210)
 |110|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree) | C++ | Easy |
 |111|[Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree) | C++ | Easy |
 |112|[Path Sum](https://leetcode.com/problems/path-sum) | C++ | Easy |
+|113|[Path Sum II](https://leetcode.com/problems/path-sum-ii) | C++ | Medium |
+|114|[Flatten Binary Tree To Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list) | C++ | Medium |
+|115|[Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences) | C++ | Hard |
+|116|[Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node) | C++ | Medium |
+|117|[Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii) | C++ | Medium |
 |118|[Pascal's Triangle](https://leetcode.com/problems/pascals-triangle) | C++ | Easy |
 |119|[Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii) | C++ | Easy |
 |120|[](https://leetcode.com/problems/)
 |121|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) | C++ | Easy |
 |122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii) | C++ | Easy |
-|123|[]
-|124|[]
+|123|[Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii) | C++ | Hard |
+|124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum) | C++ | Hard |
 |125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome) | C++ | Easy |
+|126|
+|127|
+|128|
+|129|
+|130|
+|131|
+|132|
+|133|
+|134|
+|135|
 |136|[Single Number](https://leetcode.com/problems/single-number) | C++ | Easy |
+|137|
+|138|
+|139|
+|140|
 |141|[Linked List Cycle](https://leetcode.com/problems/links-list-cycle) | C++ | Easy |
+|142|
+|143|
+|144|
+|145|
+|146|
+|147|
+|148|
+|149|
+|150|
+|151|
+|152|
+|153|
+|154|
 |155|[Min Stack](https://leetcode.com/problems/min-stack) | C++ | Easy |
-
-
-
-
+|156|
+|157|
+|158|
+|159|
+|160|
+|161|
+|162|
+|163|
+|164|
+|165|
+|166|
+|167|
+|168|
+|169|
+|170|[Two Sum II - Data structure design](https://leetcode.com/problems/two-sum-ii-data-structure-design) | C++ | Easy |
+|171|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number) | C++ | Easy |
+|172|[Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes) | C++ | Easy |
+|173|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator) | C++ | Medium |
+|174|[Dungeon Game](https://leetcode.com/problems/dungeon-game) | C++ | Hard |
+|175|[Combine Two Tables](https://leetcode.com/problems/combine-two-tables) | C++ | Easy |
+|176|[Second Highest Salary](https://leetcode.com/problems/second-highest-salary) | C++ | Easy |
+|177|[Nth Highest Salary](https://leetcode.com/problems/nth-highest-salary) | C++ | Medium | 
+|178|[Rank Scores](https://leetcode.com/problems/rank-scores) | C++ | Medium | 
+|179|[Largest Number](https://leetcode.com/problems/largest-number) | C++ | Medium |
+|180|[Consecutive Numbers](https://leetcode.com/problems/consecutive-numbers) | C++ | Medium |
 
 
