@@ -1,4 +1,4 @@
-# ACM(acm.hdu.edu.cn)
+# ACM(ascm.hdu.edu.cn)
 =====================================================
 This is my exercise for ACM. (progress 55/1000)
 =====================================================
@@ -64,8 +64,40 @@ This is my exercise for ACM. (progress 55/1000)
 |1054| [Strategic Game](http://acm.hdu.edu.cn/showproblem.php?pid=1054)
 |1055| [Color a Tree](http://acm.hdu.edu.cn/showproblem.php?pid=1055)
 |1056| [HangOver](http://acm.hdu.edu.cn/showproblem.php?pid=1056)
-|1056| [A New Grouth Industry](http://acm.hdu.edu.cn/showproblem.php?pid=1057)
-|1056| [Humble Numbers](http://acm.hdu.edu.cn/showproblem.php?pid=1058)
+|1057| [A New Grouth Industry](http://acm.hdu.edu.cn/showproblem.php?pid=1057)
+|1058| [Humble Numbers](http://acm.hdu.edu.cn/showproblem.php?pid=1058)
+|1059| [Dividing](http://acm.hdu.edu.cn/showproblem.php?pid=1059)
+|1060| [Leftmost Digit](http://acm.hdu.edu.cn/showproblem.php?pid=1060)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
