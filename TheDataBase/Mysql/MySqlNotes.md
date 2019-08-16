@@ -66,4 +66,13 @@ MySQL for Linux/Ubuntu/CentOS
 #select host,user from mysql.user;
 
 
-
+## Error 
+1.SQLyog连接mysql时，提示ERROR 1698(28000):Access denied for user 'root'@'localhost'。
+	1)进入mysql，查询权限
+		> select user,plugin from mysql.user;
+	2)修改权限，并刷新即可。
+		修改1：
+			> update mysql.user set authentication_string=PASSWORD('newPwd'), plugin='mysql_native_password' where user='root';
+		修改2：
+			> GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost' IDENTIFIED BY 'yourpasswd';
+		> flush privileges;
