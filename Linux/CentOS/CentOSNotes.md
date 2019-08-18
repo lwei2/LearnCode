@@ -86,3 +86,6 @@
 		1.4 删除rhgb quit 和改ro为rw
 		1.5 按ctrl+x重启即可进入
 		1.6 退出单用户命令:#exec /sbin/init
+	2.设置开机进入文本界面
+		# systemctl set-default multi-user.target/grapical.target
+
