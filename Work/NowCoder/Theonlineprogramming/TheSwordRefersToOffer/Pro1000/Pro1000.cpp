@@ -19,7 +19,6 @@ public:
 			return false;
 		int rowCount = array.size();
 		int colCount = array[0].size();
-		cout<<"rowCount:"<<rowCount<<",colCount:"<<colCount<<endl;
 		for(int i = rowCount - 1, j = 0; i>=0 && j<colCount;)
 		{
 			if(target == array[i][j])
