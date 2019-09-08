@@ -68,3 +68,11 @@ Ubuntu忘记root密码
 Ubuntu18.04升级19.04
 	# sudo apt-get update && sudo apt full-upgrade
 	# update-manager -c
+
+
+Ubuntu打开图形
+	1.Gwenview
+	2.gPicView
+	3.Viwnior
+	4.gThumb
+

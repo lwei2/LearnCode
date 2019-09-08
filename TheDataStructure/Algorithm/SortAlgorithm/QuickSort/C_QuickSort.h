@@ -10,7 +10,8 @@
 
 #include <stdio.h>
 
-void qsort(int *a, int left, int right)
+#ifdef 0
+void QuickSort(int *a, int left, int right)
 {
 	if(left >= right)
 		return;
@@ -31,9 +32,10 @@ void qsort(int *a, int left, int right)
 		a[j] = a[i];
 	}
 	a[i] = key;
-	sort(a,left, i - 1);
-	sort(a, i + 1, right);
+	QuickSort(a,left, i - 1);
+	QuickSort(a, i + 1, right);
 }
+#else
 
-
+#endif
 #endif
