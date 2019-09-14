@@ -27,3 +27,6 @@
 	# cd /var/lib/dpkg/updates
 	# sudo rm *
 	# sudo apt-get update
+6./dev/sda1 contains a file system with errors,check forced.
+	# fsck -f /dev/sda1
+
