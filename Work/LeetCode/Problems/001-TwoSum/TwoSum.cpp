@@ -17,6 +17,7 @@
 #include <algorithm>
 #include <map>
 #include <unordered_map>
+
 using namespace std;
 
 class Solution
@@ -135,5 +136,9 @@ class Solution
 
 int main(void)
 {
+
+	vector<int> Example1 = {2,7,11,15};
+
+
 	return 0;
 }
