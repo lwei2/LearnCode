@@ -1,4 +1,16 @@
-
+# string
+## member functions
+		1.C++98
+			default		(1) string();
+			copy		(2)	string(const string& str);
+			substring	(3)	string(const string& str, size_t pos, size_t len = pos);
+			fromt c-string(4) string(const char *s);
+			fromt sequence(5) string(const char *s, size_t n);
+			fill		(6)	string(size_t n, char c);
+			range		(7)	template<class InputIterator> string(InputIterator first, InputIterator last);
+		2.C++11(C++98)
+			initializer list	(8)	string(initializer_list<char> il);
+			move				(9) string(string &&str) noexcept;
 string::append
 	1.Appends a copy of str.
 		string& append(const string& str);
@@ -133,17 +145,23 @@ string::find_first_of
 	3.size_t find_first_of(const char* s, size_t pos, size_t n) const;
 	4.size_t find_first_of(char c, size_t pos = 0) const noexcept;
 
-string::find_last_not_of
-	1.size_t find_last_not_of(const string& str, size_t pos = npos) const noexcept;
-	2.size_t find_last_not_of(const char* s, size_t pos = npos)const;
-	3.size_t find_last_not_of(const char* s, size_t pos, size_t n) const;
-	4.size_t find_last_not_of(char c,size_t pos = npos) const noexcept;
+	函数原型:string::find_last_not_of
+		1.size_t find_last_not_of(const string& str, size_t pos = npos) const noexcept;
+		2.size_t find_last_not_of(const char* s, size_t pos = npos)const;
+		3.size_t find_last_not_of(const char* s, size_t pos, size_t n) const;
+		4.size_t find_last_not_of(char c,size_t pos = npos) const noexcept;
+ 		int find_first_of(char c, int start = 0):
+       功能:查找字符串中第1个出现的c,由位置start开始。 如果有匹配，则返回匹配位置；否则，返回-1.默认情况下，start为0，函数搜索整个字符串。
 
-string::find_last_of
-	1.size_t find_last_of(const string& str, size_t pos = npos) const noexcept;
-	2.size_t find_last_of(const char* s, size_t pos = npos) const;
-	3.size_t find_last_of(const char* s, size_t pos, size_t n) const;
-	4.size_t find_last_of(char c, size_t pos = npos) const noexcept
+
+	函数原型:string::find_last_of
+		1.size_t find_last_of(const string& str, size_t pos = npos) const noexcept;
+		2.size_t find_last_of(const char* s, size_t pos = npos) const;
+		3.size_t find_last_of(const char* s, size_t pos, size_t n) const;
+		4.size_t find_last_of(char c, size_t pos = npos) const noexcept;
+	  int find_last_of(char c);
+ 	功能:查找字符串中最后一个出现的c。有匹配，则返回匹配位置；否则返回-1.该搜索在字符末尾查找匹配，所以没有提供起始位置。
+	
 
 
 

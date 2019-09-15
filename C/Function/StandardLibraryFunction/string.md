@@ -1,3 +1,5 @@
+String
+1)strcpy
 1.函数原型:
     char *strcpy(char *dest,char *src)
         功能:把从src地址开始且含有'\0'结束字符的字符串拷贝到以dest开始的地址空间。
