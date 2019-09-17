@@ -11,6 +11,40 @@
 		2.C++11(C++98)
 			initializer list	(8)	string(initializer_list<char> il);
 			move				(9) string(string &&str) noexcept;
+		Construct string object 
+		Construct string objectnitializing its value depending on the constructor version used:
+			(1)empty string constructor(default constructor)
+				Constructs an empty string, with a length of zero characters.
+			(2)copy constructor
+				Constructs a copy of str.
+			(3)substring constructor
+				Copies the portion of str that begins at the character position pos spans len characters(or until the end of str, if either str is too short or if len is string::npos)
+			(4)from c-string
+				Copies the null-terminated character sequence(C-string) pointed by s.
+			(5)from buffer
+				Copies the first n characters from the array of characters pointed by s.
+			(6)fill constructor
+				Fills the string with n consecutive copies of character c.
+			(7)range constructor
+				Copies the sequence of characters int the range [first, last), int the same order.
+			(8)initializer list
+				Copies each of the characters in il,int the same order.
+			(9)move constructor
+				Acquires the contents of str.str is left in an unspecified but valid state.
+		Parameters
+			str - Another string object,whose value is either copy or acquired.
+			pos - Position of the first character in str that is copied to the object as a substring.If that is greater than str's length, it throws out_of_range.Note:The frist character in str is denoted by a value of 0(not 1).
+			len - Length of the substring to be copied(if the string is shorter, as many characters ass possible are copied).A value of string::npos indicates all characters until the end of str.
+			s - Pointer to an array of characters(such as a c-string).
+			n - Number of characters to copy.
+			c - Character to fill the string with.Each of the n characters in the string will be initialized to a copy of this value.
+			frist,last - Input iterators to the initial and final positions in a range. The range used is [first, last),which includes all the characters between first and last, including the character pointed by first but not the character pointed by last.The function template argument InputIterator shall be an input iterator type that points to elements of a type convertible to char.
+			il - An initializer_list object.These objects are automatically constructed fromt initializer list declarators.
+
+		3.string::~string
+			~string();
+			destroys the string object.
+
 string::append
 	1.Appends a copy of str.
 		string& append(const string& str);
