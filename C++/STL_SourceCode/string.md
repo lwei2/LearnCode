@@ -1,5 +1,6 @@
 # string
 ## member functions
+	构造函数函数原型：
 		1.C++98
 			default		(1) string();
 			copy		(2)	string(const string& str);
@@ -11,8 +12,9 @@
 		2.C++11(C++98)
 			initializer list	(8)	string(initializer_list<char> il);
 			move				(9) string(string &&str) noexcept;
+	构造函数功能：
 		Construct string object 
-		Construct string objectnitializing its value depending on the constructor version used:
+		Construct string object, initializing its value depending on the constructor version used:
 			(1)empty string constructor(default constructor)
 				Constructs an empty string, with a length of zero characters.
 			(2)copy constructor
@@ -31,6 +33,7 @@
 				Copies each of the characters in il,int the same order.
 			(9)move constructor
 				Acquires the contents of str.str is left in an unspecified but valid state.
+	构造函数参数：
 		Parameters
 			str - Another string object,whose value is either copy or acquired.
 			pos - Position of the first character in str that is copied to the object as a substring.If that is greater than str's length, it throws out_of_range.Note:The frist character in str is denoted by a value of 0(not 1).
@@ -41,10 +44,19 @@
 			frist,last - Input iterators to the initial and final positions in a range. The range used is [first, last),which includes all the characters between first and last, including the character pointed by first but not the character pointed by last.The function template argument InputIterator shall be an input iterator type that points to elements of a type convertible to char.
 			il - An initializer_list object.These objects are automatically constructed fromt initializer list declarators.
 
+	析构函数：
 		3.string::~string
 			~string();
+	析构函数功能：
 			destroys the string object.
-
+		4.string::operator=
+			1.C++98
+				string(1) string& operator=(const string &str);
+				c-string(2) string& operator=(const char *s);
+				character(3) string& operator=(char c);
+			2.C++11
+				initialer list(4) string& operator=(initializer_list<char> il);
+				move(5) string& operator=(string && str) noexcept;
 string::append
 	1.Appends a copy of str.
 		string& append(const string& str);
