@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: Pro17.12.cpp
+    > File Name: Pro18.8.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
@@ -7,26 +7,23 @@
 
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-
-class FindPair
+class Substr
 {
 	public:
-		int countPairs(vector<int>  A, int n, int sum)
+		vector<bool>chkSubStr(vector<string> p, int n, string s)
 		{
-			int count = 0;
-			for(int i = 0; i < n - 1; i++)
+			vector<bool> result;
+			for(int i = 0; i < n; ++i)
 			{
-				for(int j = i + 1; j < n; j++)
-				{
-					if(A[i] + A[j] == sum)
-						count++;
-				}
+				if(s.find(p[i]) != -1)
+					result.push_back(true);
+				else
+					result.push_back(false);
 			}
-			return count;
+			return result;
 		}
 };
 
