@@ -105,6 +105,19 @@ public:
 		}
 		return false;
 	}
+public:
+	int len = array.length - 1;
+	int i = 0;
+	while((len > 0) && (i < array[0].length))
+	{
+		if(array[len][i] > target)
+			len--;
+		else if(array[len][i] < target)
+			i++;
+		else
+			return true;
+	}
+	return false;
 };
 
 int main(void)
