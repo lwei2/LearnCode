@@ -1,9 +1,0 @@
-1.函数原型:char *strtok(char *s, const char *delim);
-    功能:
-    参数:
-	返回值:char *
-2.函数的实现:
-	char *strtok(char *s, const char *delim)
-	{
-
-	}
