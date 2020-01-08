@@ -1,4 +1,4 @@
-
+# vector
 vector方法
 1.push_back()	在最后添加一个数据
 2.pop_back()	在最后去掉一个数据
@@ -18,4 +18,6 @@ vector方法
 16.rend()		反向结束迭代器
 17.empty()		判断向量是否为空
 18.swap()		与另一个向量交换数据
+
+
 
