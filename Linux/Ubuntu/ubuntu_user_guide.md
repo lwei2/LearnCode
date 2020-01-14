@@ -76,3 +76,9 @@ Ubuntu打开图形
 	3.Viwnior
 	4.gThumb
 
+
+Ubuntu系统与Windows系统时间不同步
+	1.#timedatectl set-timezone "Asia/Shanghai"
+	2.#timedatectl status 
+
+
