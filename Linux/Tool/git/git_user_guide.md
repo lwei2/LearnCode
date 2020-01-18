@@ -108,4 +108,17 @@
 	提示：详见 'git push -- help' 中的 'Note about fast-forwards' 小节。
 	处理办法：git push -u origin +master
 
+2.
+
+#github
+192.30.253.113 github.com
+192.30.253.113 github.com
+192.30.253.118 gist.github.com
+192.30.253.119 gist.github.com
+
+
+windows下路径为：
+C:\Windows\System32\drivers\etc\hosts 
+Linux下路径：
+/etc/hosts
 
