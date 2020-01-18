@@ -1,4 +1,19 @@
 #Ubuntu
+## 常用的命令
+	统计该文件行数
+		#wc -l filename
+		#cat filename | wc -l
+		#awk 'END{print NR}' filename
+		#awk 'END{print NR}' filename | tail -n1
+	统计该文件非重复的总数
+		#cat filename | sort | uniq | wc -l
+	统计该文件重复行的总数
+		#sort filename | uniq -c
+	统计指定内容在文件中农出现的次数j
+		#grep -c 'xxx' filename
+		#grep 'xxx' filename | wc -l
+
+
 
 1.重置桌面到初始状态
       (1)打开终端,安装gnome-tweak-tool工具
@@ -80,5 +95,3 @@ Ubuntu打开图形
 Ubuntu系统与Windows系统时间不同步
 	1.#timedatectl set-timezone "Asia/Shanghai"
 	2.#timedatectl status 
-
-
