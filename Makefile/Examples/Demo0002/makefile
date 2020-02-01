@@ -10,9 +10,6 @@ clean:
 	rm -rf *.o main
 
 
-
-
-
 #OBJS = main.o sub.o add.o
 #main:$(OBJS)
 #	gcc -Wall -g $(OBJS) -o $@

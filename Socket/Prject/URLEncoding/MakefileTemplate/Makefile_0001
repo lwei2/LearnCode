@@ -1,10 +1,10 @@
-CC = gcc
+CC=gcc
 IDIR = ../include
 CFLAGS = -I$(IDIR)
 
 ODIR = obj
 LDIR = ../lib
-LIBS =-lm
+LIBS=-lm
 
 _DEPS = url.h
 DEPS = $(patsubst %, $(IDIR)/%, $(_DEPS))

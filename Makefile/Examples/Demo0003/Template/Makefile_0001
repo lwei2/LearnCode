@@ -1,0 +1,4 @@
+hello:hello.c hellofunc.c
+	gcc hello.c hellofunc.c hello.h -o hello -I.
+clean:
+	rm -rf hello
