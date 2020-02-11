@@ -7,24 +7,38 @@
 
 
 #include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <string.h>
 
 using namespace std;
 
-int n, cnt = 1001;
-char s[1010], ans[4];
-
 int main(void)
 {
-	ans[1] = 'N', ans[2] = 'E', ans[3] = 'S', ans[0] = 'W';
-	cin>>n;
-	cin>>s;
-	for(int i = 0; i < n; ++i)
+	int t;
+	scanf("%d",&t);
+	int i;
+	for(i = 0; i < t; i++)
 	{
-		if(s[i] == 'R')
-			cnt++;
-		else
-			cnt--;
+		int n;
+		scanf("%d",&n);
+		char path[1000];
+		scanf("%s",&path);
+		int j, count = 0;
+		for(j = 0; j < n;)
+		{
+			if(path[j] == 'X')
+			{
+				j++;
+				continue;
+			}
+			else if(path[j] == '.')
+			{
+				count++;
+				j+=3;
+			}
+		}
+		printf("%d\n",count);
 	}
-	cout<<ans[cnt%4];
 	return 0;
 }

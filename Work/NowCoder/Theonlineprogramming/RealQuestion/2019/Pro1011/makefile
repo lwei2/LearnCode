@@ -1,4 +1,2 @@
-Pro1011-1:
-	gcc Pro1011-1.c -o Pro1011-1
-clean:
-	rm -rf Pro1011-1
+Pro1010-1:
+	g++ Pro1010-1.cpp -o Pro1010-1 -std=c++11

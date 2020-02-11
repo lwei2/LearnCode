@@ -9,25 +9,28 @@
 
 int main(void)
 {
-	int n,k;
-	scanf("%d%d",&n,&k);
-	int ret = n - k;
-	unsigned long long count = 0;
-	if(k == 0)
-		count = (long long)n*n;
-	else
+	int n,s = 1;
+	int ss, i;
+	char a[10000];
+	scanf("%d",&n);
+	scanf("%s",&a);
+	for(i = 0; i < n; i++)
 	{
-		for(int i =1; i <= ret; i++)
-		{
-			count += i;
-			int j = n%(i+k)-k+1;
-			int z = (n/(i+k)-1)*i;
-			if(j >= 0)
-				count = count + j + z;
-			else
-				count = count + z;
-		}
+		if(a[i] == 'L')
+			--s;
+		else if(a[i] == 'R')
+			++s;
 	}
-	printf("%llu\n",count);
+	if(s < 1)
+		s = 4-(-s)%4;
+	ss = s%4;
+	if(ss == 1)
+		printf("N");
+	if(ss == 2)
+		printf("E");
+	if(ss == 3)
+		printf("S");
+	if(ss == 0)
+		printf("W");
 	return 0;
 }

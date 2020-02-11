@@ -1,2 +1,2 @@
-Pro1010-1:
-	g++ Pro1010-1.cpp -o Pro1010-1 -std=c++11
+Pro1009:
+	g++ Pro1009.cpp -o Pro1009 -std=c++11

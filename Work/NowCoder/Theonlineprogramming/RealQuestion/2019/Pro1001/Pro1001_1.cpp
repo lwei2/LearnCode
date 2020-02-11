@@ -7,21 +7,36 @@
 
 
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 
+using LL = int64_t;
+using LD = long double;
+const LL INF = 0x3f3f3f;
+const LL mod = 1e9 + 7;
+
+
 int main(void)
 {
-	long long int l,r;
-	while(cin>>l>>r)
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	int n,m;
+	cin>>n>>m;
+	vector<pair<int, int>> a(n);
+	for(auto &i : a)
+		cin>>i.first>>i.second;
+	sort(a.begin(), a.end());
+	vector<int> b(n);
+	b[0] = a[0].second;
+	for(int i = 1; i < n; i++)
+		b[i] = max(a[i].second, b[i-1]);
+	for(int i = 0; i < m; i++)
 	{
-		long long int count = 0;
-		for(int i = l; i <= r; i++)
-		{
-			if(((i+1)*i/2)%3 == 0)
-				count++;
-		}
-		cout<<count<<endl;
+		int v;
+		cin>>v;
+		auto x = upper_bound(a.begin(), a.end(), pair<int, int>(v, 1000000005)) - a.begin();
+		cout<<b[x-1]<<'\n';
 	}
 	return 0;
 }

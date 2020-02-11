@@ -1,27 +1,25 @@
 /*************************************************************************
-    > File Name: Pro1008-1.c
+    > File Name: Pro1004_2.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
  ************************************************************************/
 
-#include <stdio.h>
 
-int a[1005];
+#include <iostream>
+
+using namespace std;
+
+int n, cnt = 1001;
+char s[1010], ans[4] = {
+	'W', 'N', 'E', 'S'
+};
+
 int main(void)
 {
-	int n,m;
-	scanf("%d%d",&n,&m);
-	int ans = m;
-	while(m--)
-	{
-		int x;
-		scanf("%d",&x);
-		a[x]++;
-	}
-	for(int i = 1; i <= n; i++)
-		if(ans > a[i])
-			ans = a[i];
-	printf("%d\n",ans);
+	scanf("%d%s",&n,&s);
+	for(int i = 0; i < n; ++i)
+		s[i] == 'R' ? cnt++:cnt--;
+	printf("%c", ans[cnt%4]);
 	return 0;
 }

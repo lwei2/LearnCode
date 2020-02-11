@@ -1,4 +1,4 @@
-Pro1003:
-	g++ -g Pro1003.cpp -o Pro1003 
+Pr1002:
+	g++ -g Pr1002.cpp -o Pr1002 -std=c++11
 clean:
-	rm -rf Pro1003
+	rm -rf Pr1002

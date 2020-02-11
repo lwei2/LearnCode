@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: Pro1003_2.cpp
+    > File Name: Pro1002_1.cpp
     > Author: lwei2
     > Mail: lwei2@IT.com 
     > The Description :
@@ -10,16 +10,18 @@
 
 using namespace std;
 
-int n, cnt = 1001;
-char s[1010], ans[4] = {
-	'W', 'N', 'E', 'S'
-};
-
 int main(void)
 {
-	scanf("%d%s",&n,&s);
-	for(int i = 0; i < n; ++i)
-		s[i] == 'R' ? cnt++:cnt--;
-	printf("%c", ans[cnt%4]);
+	long long int l,r;
+	while(cin>>l>>r)
+	{
+		long long int count = 0;
+		for(int i = l; i <= r; i++)
+		{
+			if(((i+1)*i/2)%3 == 0)
+				count++;
+		}
+		cout<<count<<endl;
+	}
 	return 0;
 }

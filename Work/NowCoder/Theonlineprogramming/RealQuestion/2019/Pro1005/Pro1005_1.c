@@ -7,36 +7,27 @@
 
 #include <stdio.h>
 
-int x[50][2];
-int y[50][2];
-
 int main(void)
 {
-	int i,j,k,n;
-	int num = 0, tmp = 0;
-	scanf("%d",&n);
-	for(i = 0; i < n; i++)
-		scanf("%d",&x[i][0]);
-	for(i = 0; i < n; i++)
-		scanf("%d",&y[i][0]);
-	for(i = 0; i < n; i++)
-		scanf("%d",&x[i][1]);
-	for(i = 0; i < n; i++)
-		scanf("%d",&y[i][1]);
-
-	for(j = 0; j < n; j++)
+	int n,k;
+	scanf("%d%d",&n,&k);
+	int ret = n - k;
+	unsigned long long count = 0;
+	if(k == 0)
+		count = (long long)n*n;
+	else
 	{
-		for(k = 0; k < n; k++)
+		for(int i =1; i <= ret; i++)
 		{
-			tmp = 0;
-			for(i = 0; i < n; i++)
-				if(x[j][0] >= x[i][0] && x[j][0] < x[i][1])
-					if(y[k][0] >= y[i][0] && y[k][0] < y[i][1])
-						tmp++;
-			if(num < tmp)
-				num = tmp;
+			count += i;
+			int j = n%(i+k)-k+1;
+			int z = (n/(i+k)-1)*i;
+			if(j >= 0)
+				count = count + j + z;
+			else
+				count = count + z;
 		}
 	}
-	printf("%d",num);
+	printf("%llu\n",count);
 	return 0;
 }
