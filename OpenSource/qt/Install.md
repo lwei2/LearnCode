@@ -1,2 +1,5 @@
 # Install
+
+##windows
+
 ## Ubuntu
