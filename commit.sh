@@ -10,7 +10,9 @@ echo "============================================"
 
 echo "start to commit your code."
 
-git add . && git commit -m "add master" && git push origin master
+git add . 
+git commit -m "add master"
+git push origin master
 
 echo "end to commit your code."
 
