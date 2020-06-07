@@ -107,7 +107,16 @@
 	4)同步
 		# git merge origin/master
 
+		git pull <远程主机名> <远程分支名>:<本地分支名>
+		git pull origin master:brantest
+		将远程主机origin的master分支拉取过来，与本地的brantest分支合并。
+		表示将远程origin主机的master分支拉取过来和本地的当前分支进行合并。
 
+		上面的pull操作用fetch表示为：
+
+git fetch origin master:brantest
+
+git merge brantest
 
 错误总结:
 =============
