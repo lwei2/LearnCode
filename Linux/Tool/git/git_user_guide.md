@@ -97,6 +97,17 @@
    5) git commit -m "commit file name"
    6) git push -u origin master	
 
+4.远程库同步到本地创建仓库
+	1)查看远程库	
+		# git remote -v
+	2)获取远程库最新代码
+		# git fetch origin master
+	3)比较本地和远程库的区别
+		# git log -p master.. origin/master
+	4)同步
+		# git merge origin/master
+
+
 
 错误总结:
 =============
