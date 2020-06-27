@@ -1,4 +1,16 @@
 #Qt
+	第一章. Qt简介
+	第二章.
+
+
+
+# 第一章.Qt简介
+>	Qt是一个跨平台应用程序和UI开发框架。使用Qt只需一次性开发应用程序，无须重新编写源代码，便可跨不同桌面和嵌入式操作系统部署这些应用程序。Qt Software 的前身为创始于1994年的Trolltech（奇趣科技），Trolltech于2008年6月被 Nokia 收购，加速了其跨平台开发战略，2011年3月Qt被芬兰的Digia公司收购。
+>	Qt Creator是全新的跨平台 Qt IDE（集成开发环境），可单独使用，也可与 Qt 库和开发工具组成一套完整的SDK（软件开发工具包 ）。其中包括：高级 C++ 代码编辑器、项目和生成管理工具、集成的上下文相关的帮助系统、图形化调试器、代码管理和浏览工具。
+>	
+
+## Qt环境搭建	
+	MinGW即Minimalist GNU For Windows，是将GNU开发工具移植到Win32平台下的产物，是一套Windows上的GNU工具集。用其开发的程序不需要额外的第三方DLL支持就可以直接在Windows下运行。更多内容请查看http://www.mingw.org 。
 ## Qt 安装
 
 ## Qt 编译
@@ -6,6 +18,44 @@
 		# qmake -v 
 	2.生成makefile
 		# qmake *.pro
+
+## Qt源码编译
+>	在默认情况下，用QtCreator编译程序时，使用的是动态编译。编译好的程序在运行时需要另外加上相应的Qt库文件，一大堆dll文件。如果想将生成的程序连同所需要的库一起完整地打包成一个可执行程序，那就需要使用静态编译。Qt官方不提供静态编译好的安装包，所以需要我们在自己的电脑上静态编译。而且exe文件会比动态编译的要小上很多。
+	1.下载Qt源码
+		#Qt最新版的源码下载地址：Index of /archive/qt/xxx/xxx.xx/
+	2.根据Qt官方文档和编译平台下载相关的工具。
+		关于Windows平台下编译源码，需下载如下工具：
+		2.1 下载安装ActivePerl
+			> perl.exe -v  //检查版本，判断是否已经安装成功
+		2.2 下载安装Python
+			> python.exe 	//同上
+		2.3 下载安装Ruby				
+			> ruby.exe
+	3.选择编译环境,例如：VS xxx的开发人员命令提示符
+	4.编译并安装
+		4.1 进入Qt解压后的源码路径下
+		4.2 修改源码配置文件qtbase\mkspecs\common\msvc-desktop.conf文件，即
+			-MD修改为-MT,-MDd修改为-MTd。D是动态编译(dynamic)，T是静态编译（static）。
+		4.3 配置编译环境：
+			configure.bat 
+				-static //指明是静态编译
+				-prefix "D:\qt" //指明安装的目录
+				-confirm-license -opensource  //指明是开源版本的qt
+				-debug-and-release //指明需要debug版和release版，可以单独选择release版
+				-platform win32-msvc  //指明使用msvc编译
+				-nomake examples -nomake tests  //不编译样例
+				-plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg //可选插件
+				-opengl desktop 
+				-mp //多核编译
+			例如：configure.bat -static -prefix "D:\Qt\Src\qt-static-src-5.14.1" -confirm-license -opensource  -debug-and-release -platform win32-msvc  -nomake examples -nomake tests  -plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop -mp
+		4.4 编译，即 > nmake && nmake install 
+		4.5 选择构建套件，Qt版本选择刚添加的静态版
+## 应用程序设置图标
+	1.创建.ico文件，将ico图标文件复制到工程文件夹。
+	2.修改项目文件.pro文件，添加RC_ICONS = xxx.ico
+
+## Qt控件
+	QWidget类是所有用户界面对象的基类，被称为基础窗口部件。QWidget继承自QObject类和QPaintDevice类，其中QObject类是所有支持Qt对象模型（Qt Object Model）的Qt对象的的基类，QPaintDevice类是所有可以绘制的对象的基类。
 
 ## Qt多线程
 	1.程序和进程的区别
@@ -54,6 +104,10 @@
 			int available () ;
 		5.4 释放由信号量保护的n个资源。
 			void release ( int n = 1 );
+
+##Qt文件说明
+	在项目文件夹中生成的.pro.user文件，它包含了本地构建信息，包含Qt版本和构建目录等。
+
 
 ## 常见错误小结
 	1. 提示:cannot find -lGL

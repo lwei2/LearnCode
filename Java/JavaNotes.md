@@ -18,3 +18,5 @@ Java的安装与环境配置
 3.Java编译:	#javac 源码
 			#java xxx
 
+Java以.java为后缀名的源码			
+
