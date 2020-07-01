@@ -108,8 +108,32 @@
 ##Qt文件说明
 	在项目文件夹中生成的.pro.user文件，它包含了本地构建信息，包含Qt版本和构建目录等。
 
+## Qt Qss	
+	Qt Style Sheets，
+  Qt样式表属性说明：
+	属性1：控件背景设置
+        background-image      
+	border:边框像素设置
+	margin:坐标位置
+		margin-top
+		margin-left
+		margin-bottom
+		margin-right
+	颜色：
+		RGB/rgb(255,0,0) 		- 红色
+		RGB/rgb(255,255,255) 	- 白色 
+
+##Qt绘制事件
+  当应用程序收到绘制事件，会调用QWidget::paintEvent()。该函数就是绘制窗口的地方。
+  重绘窗口，有两种办法：update()和repaint()
+  update()-把重绘事件添加到事件队列中
+    1.重复调用update()会被Qt合并为一次
+    2.不会产生图像闪烁
+    3.可带参数指定重绘某个区域。
+
 
 ## 常见错误小结
 	1. 提示:cannot find -lGL
+	如何解决：
 		
 
