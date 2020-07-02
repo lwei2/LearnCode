@@ -109,7 +109,7 @@
 	在项目文件夹中生成的.pro.user文件，它包含了本地构建信息，包含Qt版本和构建目录等。
 
 ## Qt Qss	
-	Qt Style Sheets，
+	Qt Style Sheets。Qt样式表（以下统称QSS）的术语和语法规则几乎和CSS相同
   Qt样式表属性说明：
 	属性1：控件背景设置
         background-image      
@@ -119,6 +119,12 @@
 		margin-left
 		margin-bottom
 		margin-right
+CSS边界样式及示例	说明
+margin-top:10px;	上边界值
+margin-right:10px;	右边界值
+margin-bottom:10px;	下边界值
+margin-left:10px;	左边界值
+		
 	颜色：
 		RGB/rgb(255,0,0) 		- 红色
 		RGB/rgb(255,255,255) 	- 白色 
