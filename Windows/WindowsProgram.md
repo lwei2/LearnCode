@@ -39,7 +39,22 @@ SSD固态硬盘常识
 
 
 
+#include <stdio.h>
+#define my_printf(fmt,...) printf(fmt,##__VA_ARGS__)
+#define TRACE_CDH(fmt,...)\
+                printf("%s-%s--->>%s:%s(%d):"fmt, __DATE__,__TIME__,__FILE__,__FUNCTION__, __LINE__,##__VA_ARGS__)
+//...和__VA_ARGS__ 对应 为可变参数 ##的作用当可变参数的个数为0时去掉前面的逗号 宏__STDC__的作用为实现是为标准 如果是标准为1 非标准为非1
+//fmt是固定的
+int main(int argc, char**argv)
+{
+                int a = 1;
+                TRACE_CDH();//##作用在这 可变参数没有时 会把之前的逗号去掉
+                my_printf("a=%d\n",a);// 如果逗号前面是fmt,这个形式的如果没有参数会报错  所以##要不要无所谓
+                return 0;
+}
 
+
+"QLabel{border-image:url(:/res/main/Icon.png);border-radius:0px;}"
 
 常用网址：
 	1.https://wenku.baidu.com/view/73f3148ba200a6c30c22590102020740bf1ecd63.html?rec_flag=default

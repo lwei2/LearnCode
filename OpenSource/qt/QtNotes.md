@@ -57,6 +57,9 @@
 ## Qt控件
 	QWidget类是所有用户界面对象的基类，被称为基础窗口部件。QWidget继承自QObject类和QPaintDevice类，其中QObject类是所有支持Qt对象模型（Qt Object Model）的Qt对象的的基类，QPaintDevice类是所有可以绘制的对象的基类。
 
+
+	QImage和QPixmap区别：QPixmap是专门为绘图而生，当需要绘制图片时你需要使用QPixmap。QImage则是为I/O，为图片像素访问以及修改而设计的。如果你想访问图片的像素或是修改图片像素，则需要使用QImage，或者借助于QPainter来操作像素。另外跟QImage不同是，QPixmap跟硬件是相关的，如X11, Mac 以及 Symbian平台上，QPixmap 是存储在服务器端，而QImage则是存储在客户端，在Windows平台上，QPixmap和QImage都是存储在客户端，并不使用任何的GDI资源。
+
 ## Qt多线程
 	1.程序和进程的区别
 		进程是动态的，程序是静态的；进程是暂时的，程序是永久的，进程是通过程序运行时得到的。
