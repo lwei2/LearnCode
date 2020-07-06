@@ -1,1 +1,6 @@
 #QPainter class 
+
+#
+	setClipRect
+
+##

@@ -32,7 +32,20 @@
 	http://acm.hrbust.edu.cn/
 	http://acm.mipt.ru/judge/
 	http://acm.hit.edu.cn/
-
+C++在线编译器
+	1.https://c.runoob.com/compile/12
+	2.http://www.dooccn.com/cpp/
+图片素材：
+	1.https://www.easyicon.net/--lwei2 809882749@qq.com lwei2easyicon
+	2.http://simpleicons.org/	
+	3.https://iconstore.co/
+	4.https://www.manypixels.co/gallery/
+	5.https://www.stockio.com/
+字体颜色网址
+    1.https://encycolorpedia.cn/
+    2.http://www.zhongguosou.com/computer_question_tools/color_standard_web.html
+相关的技术网址
+    1.https://www.t10.org/
 
 
 

@@ -21,7 +21,22 @@ SSD固态硬盘常识
 	1.	
 
 
-#Windows API
+#Windows API - https://docs.microsoft.com/zh-tw/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol?redirectedfrom=MSDN
+	D.DeviceIoControl		
+		1.函数原型：BOOL WINAPI DeviceIoControl(
+				  _In_        HANDLE       hDevice,
+				  _In_        DWORD        dwIoControlCode,
+				  _In_opt_    LPVOID       lpInBuffer,
+				  _In_        DWORD        nInBufferSize,
+				  _Out_opt_   LPVOID       lpOutBuffer,
+				  _In_        DWORD        nOutBufferSize,
+				  _Out_opt_   LPDWORD      lpBytesReturned,
+				  _Inout_opt_ LPOVERLAPPED lpOverlapped
+			);
+		2.函数参数：
+				hDevice [in] - 需要执行操作的设备句柄。该设备通常是卷，目录，文件或流，使用 CreateFile 函数打开获取设备句柄。具体的见备注
+
+
 	1.GetLastError();
 		返回值：
 		〖0〗-操作成功完成。
@@ -35,7 +50,6 @@ SSD固态硬盘常识
 		〖8〗-存储空间不足，无法处理此命令。
 		〖9〗-存储控制块地址无效。
 		〖10〗-环境错误。
-
 
 
 
