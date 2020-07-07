@@ -46,7 +46,8 @@ C++在线编译器
     2.http://www.zhongguosou.com/computer_question_tools/color_standard_web.html
 相关的技术网址
     1.https://www.t10.org/
-
+SVG元素参考：
+    2.https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/radialGradient
 
 
 
