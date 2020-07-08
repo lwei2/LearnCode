@@ -15,13 +15,21 @@ CMD命令使用
 
 
 硬盘的分类
-	1.接口类型：IDE硬盘、SATA硬盘、SCSI硬盘、其他接口盘
+	1.硬盘接口分为IDE、SATA、SCSI、光纤通道、M2-SATA、M2-Nvme和SAS七种.
 
 SSD固态硬盘常识
 	1.	
 
+硬盘的读写
+	https://max.book118.com/html/2017/1204/142747942.shtm
 
-#Windows API - https://docs.microsoft.com/zh-tw/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol?redirectedfrom=MSDN
+# MFC API
+	1.GetLength();
+
+#Windows API
+	C.CFileFind class
+		c1.GetLength();
+
 	C.
 		1.函数原型：
 			HANDLE WINAPI CreateFile(
@@ -292,7 +300,7 @@ int main(int argc, char**argv)
 }
 
 
-"QLabel{border-image:url(:/res/main/Icon.png);border-radius:0px;}"
+
 
 常用网址：
 	1.https://wenku.baidu.com/view/73f3148ba200a6c30c22590102020740bf1ecd63.html?rec_flag=default
@@ -300,3 +308,5 @@ int main(int argc, char**argv)
 	3.http://www.elecfans.com/yuanqijian/jiekou/20180326652414_a.html
 	4.https://docs.microsoft.com/zh-cn/windows-hardware/drivers/kernel/state-transitions-for-pnp-devices
 	5.http://bbs.mydigit.cn/read.php?tid=331754
+	6.https://docs.microsoft.com/zh-tw/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol?redirectedfrom=MSDN
+	7.https://docs.microsoft.com/zh-tw/windows/win32/fileio/disk-management-control-codes?redirectedfrom=MSDN
