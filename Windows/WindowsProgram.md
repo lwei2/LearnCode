@@ -28,6 +28,7 @@ SSD固态硬盘常识
 
 #Windows API
 	C.CFileFind class
+		
 		c1.GetLength();
 
 	C.

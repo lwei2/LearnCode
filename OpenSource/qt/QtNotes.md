@@ -144,5 +144,7 @@ margin-left:10px;	左边界值
 ## 常见错误小结
 	1. 提示:cannot find -lGL
 	如何解决：
+	2.Qt Run-time Check Failure #2
+		内存越界
 		
 
