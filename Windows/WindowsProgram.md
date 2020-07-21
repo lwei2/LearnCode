@@ -12,7 +12,7 @@ CMD命令使用
 	3.list disk
 	4.select disk 0/1/2
 	5.detail disk
-
+ATA发命令Cdb
 
 硬盘的分类
 	1.硬盘接口分为IDE、SATA、SCSI、光纤通道、M2-SATA、M2-Nvme和SAS七种.
@@ -79,7 +79,12 @@ SSD固态硬盘常识
 		dwIoControlCode [in]操作的控制代码，该值标识要执行的特定操作以及执行该操作的设备的类型，有关控制代码的列表，请参考备注。每个控制代码的文档都提供了lpInBuffer，nInBufferSize，lpOutBuffer和nOutBufferSize参数的使用细节。
 		lpInBuffer [in, optional]
     （可选）指向输入缓冲区的指针。这些数据的格式取决于dwIoControlCode参数的值。如果dwIoControlCode指定不需要输入数据的操作，则此参数可以为NULL。
-
+nInBufferSize [in]
+    	输入缓冲区以字节为单位的大小。单位为字节。
+lpOutBuffer [out, optional]
+    （可选）指向输出缓冲区的指针。这些数据的格式取决于dwIoControlCode参数的值。如果dwIoControlCode指定不返回数据的操作，则此参数可以为NULL。
+nOutBufferSize [in]
+    输出缓冲区以字节为单位的大小。单位为字节。
 
 
 		3.函数返回值：

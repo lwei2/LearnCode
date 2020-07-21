@@ -19,7 +19,7 @@
                              "QSlider::handle:horizontal{border-image:url(:/res/mandsk/manDskHandle1.png);border-radius:0px;width:40px;height:40px;margin: -16px -2px -16px -2px;}"
                              "QSlider::sub-page:horizontal{background:#00FF00;border:none;border-radius:4px;}"
                              "QSlider::add-page:horizontal{background:#C0C0C0;border:none;border-radius:4px;}");
-
+////"QSlider{background:transparent;}"
 
 
 sliderBar->setStyleSheet("QSlider{background:transparent;border-style:outset;}"
@@ -34,3 +34,26 @@ sliderBar->setStyleSheet("QSlider{background:transparent;border-style:outset;}"
                              "QSlider::handle:horizontal{border-image:url(:/res/mandsk/manDskHandle1.png);border-radius:0px;width:40px;height:40px;margin: -16px -2px -16px -2px;}"
                              "QSlider::sub-page:horizontal{background:#00FF00;border:none;border-radius:4px;}"
                              "QSlider::add-page:horizontal{background:#C0C0C0;border:none;border-radius:4px;}");                             
+
+
+
+QProgressBar::chunk {
+background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,
+stop: 0 #78d,
+stop: 0.4999 #46a,
+stop: 0.5 #45a,
+stop: 1 #238 );
+border-bottom-right-radius: 7px;
+border-bottom-left-radius: 7px;
+border: 1px solid black;
+}                             
+
+
+    int res = dlgTouAuth.exec();
+    if(res == QDialog::Accepted)
+    {
+        this->accept();
+    }
+
+
+    m_pBtnLocked
