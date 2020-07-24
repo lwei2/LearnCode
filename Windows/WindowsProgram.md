@@ -25,7 +25,16 @@ SSD固态硬盘常识
 
 # MFC API
 	1.GetLength();
-
+	2.DoModel();
+		函数功能：获取莫态对话框
+	3.SetTimer();
+	SetTimer函数的原型
+		UINT_PTR SetTimer(
+		HWND hWnd, // 窗口句柄
+		UINT_PTR nIDEvent, // 定时器ID，多个定时器时，可以通过该ID判断是哪个定时器
+		UINT nElapse, // 时间间隔,单位为毫秒
+		TIMERPROC lpTimerFunc // 回调函数
+		);		
 #Windows API
 	C.CFileFind class
 		
@@ -306,6 +315,8 @@ int main(int argc, char**argv)
 }
 
 
+
+GetBuffer(); 获取缓冲区至少几个字节。
 
 
 常用网址：
