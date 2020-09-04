@@ -95,3 +95,7 @@ Ubuntu打开图形
 Ubuntu系统与Windows系统时间不同步
 	1.#timedatectl set-timezone "Asia/Shanghai"
 	2.#timedatectl status 
+#U盘查看使用
+1.在文件系统处查看
+2.在命令行的media处查看
+3.在命令行处mount处查看U盘挂载情况
