@@ -50,6 +50,7 @@
 			例如：configure.bat -static -prefix "D:\Qt\Src\qt-static-src-5.14.1" -confirm-license -opensource  -debug-and-release -platform win32-msvc  -nomake examples -nomake tests  -plugin-sql-sqlite -plugin-sql-odbc -qt-zlib -qt-libpng -qt-libjpeg -opengl desktop -mp
 		4.4 编译，即 > nmake && nmake install 
 		4.5 选择构建套件，Qt版本选择刚添加的静态版
+			4.5 配置套件时，需要下载WINSDK:https://download.microsoft.com/download/4/2/2/42245968-6A79-4DA7-A5FB-08C0AD0AE661/windowssdk/winsdksetup.exe,只选择Debugging Toolsfor Windows按照即可。套件就不会有感叹号！
 ## 应用程序设置图标
 	1.创建.ico文件，将ico图标文件复制到工程文件夹。
 	2.修改项目文件.pro文件，添加RC_ICONS = xxx.ico
