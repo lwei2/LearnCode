@@ -11,6 +11,12 @@
 
 
 
+##MacOS配置VIM
+	1.查看VIM安装的路径
+		#which vim
+
+
+
 
 
 
