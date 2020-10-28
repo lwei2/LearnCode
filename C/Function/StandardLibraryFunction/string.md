@@ -1,4 +1,16 @@
 #string
+	1.strlen
+	2.strcpy
+	3.strncpy
+	4.strcat
+	5.strcmp
+	6.strncmp
+	7.memcmp
+	8.memcpy
+	9.memmove
+	10.memset
+	11.strtok
+
 ##strlen
 	1.函数原型:exntern size_t strlen(const char *str)
 	    功能:计算给定字符串的长度，不包括'\0'。
@@ -284,6 +296,25 @@
 	    }
 	    return src;
 	}
+
+##strdup
+
+##strchr
+	1.函数原型：char *strchr(const char *str, int c);
+		头文件：#include <string.h>
+		功能：在参数str所指向的字符串中搜索第一次出现字符c（一个无符号字符）的位置。
+		参数：str - 要被检索的 C 字符串
+			  c - 在 str 中要搜索的字符	
+		返回值：返回一个指向该字符串中第一次出现的字符的指针，如果字符串中不包含该字符则返回NULL空指针。
+		char *strchr(char *str, int c)
+		{
+			char *s = str;
+			while(*s != '\0' && *s != c)
+			{
+				++s;			
+			}
+			return *s == c ? s : NULL;
+		}
 
 ##strtok
 	1.函数原型:char *strtok(char *s, const char *delim);

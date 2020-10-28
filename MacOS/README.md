@@ -4,7 +4,7 @@
 
 
 
-
+	MacOS默认挂载点/Volumes/xxx
 
 
 
@@ -28,6 +28,7 @@
 	3.擦除整个磁盘并重新格式化
 		#diskutil eraseDisk <format> <name> [APM|MBR|GPT] MountPoint|DiskIdentifier|DeviceNode
 		format 用于指定擦除数据后需要重新建立的文件系统类型。可以为 %noformat% 来跳过初始化文件系统的操作。其他支持的类型可以通过 listFilesystems 选项查看
+
 
 
 
