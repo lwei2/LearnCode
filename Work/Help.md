@@ -36,7 +36,7 @@ C++在线编译器
 	1.https://c.runoob.com/compile/12
 	2.http://www.dooccn.com/cpp/
 图片素材：
-	1.https://www.easyicon.net/--lwei2 809882749@qq.com lwei2easyicon
+	1.https://www.easyicon.net/
 	2.http://simpleicons.org/	
 	3.https://iconstore.co/
 	4.https://www.manypixels.co/gallery/
