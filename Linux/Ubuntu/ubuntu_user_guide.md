@@ -12,8 +12,8 @@
 	统计指定内容在文件中农出现的次数j
 		#grep -c 'xxx' filename
 		#grep 'xxx' filename | wc -l
-
-
+	查看当前用户
+	#Whoami
 
 1.重置桌面到初始状态
       (1)打开终端,安装gnome-tweak-tool工具

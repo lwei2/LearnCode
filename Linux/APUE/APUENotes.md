@@ -12,7 +12,8 @@ APUE笔记
 
 ## 常用的函数
 
-1.pid_t fork(void)
+1.fork
+	函数原型：pid_t fork(void)
 	返回值: 在父进程中，fork返回新创建子进程的进程ID;
 			在子进程中，fork返回0;
 			若出错，fork返回负值(-1).
@@ -21,3 +22,10 @@ APUE笔记
 3.pid_t getppid(void);
     返回值:父进程ID
 
+4.int setuid(int uid);
+5.getuid
+	头文件： #include <unistd.h>
+			#include <sys/types.h>
+	函数原型：uid_t getuid(void);
+	函数功能：返回当前执行进程的识别码。
+	函数参数：
