@@ -1,6 +1,10 @@
 #sg3_utils
 向特定SCSI设备发送SCSI命令步骤：
-	1.打开SCSI
+	1.打开SCSI通用设备文件。
+	2.获取SCSI设备文件描述符。
+	3.准备SCSI命令。
+	4.调用ioctl函数执行SCSI命令。
+	5.关闭设备文件。
 
 typedef struct sg_io_hdr
 {

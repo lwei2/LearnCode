@@ -23,6 +23,44 @@ SSD固态硬盘常识
 硬盘的读写
 	https://max.book118.com/html/2017/1204/142747942.shtm
 
+#MFC数据类型转换
+	1.Unicode下 CString转换为char *
+		1.1
+			CString cstr = _T("test")
+			USES_CONVERSION;	//声明标识
+			char * pFileName = T2A(cstr);   //函数T2A和W2A均支持ATL和MFC中的字符
+			//char * pFileName = W2A(cstr); //也可实现转换 注意：有时候可能还需要添加引用#include <afxpriv.h>
+		1.2 
+			CString str = _T("test");
+			int n = str.GetLength();	//注意：以下n和len的值大小不同，n是按字符计算的，len是按字节计算的
+	 		int len = WideCharToMultiByte(CP_ACP,0,str,str.GetLength(),NULL,0,NULL,NULL);	//获取宽字节字符的大小，大小是按字节计算的
+			char * pFileName = new char[len+1];   //以字节为单位//为多字节字符数组申请空间，数组大小为按字节计算的宽字节字节大小
+			WideCharToMultiByte(CP_ACP,0,str,str.GetLength(),pFileName,len,NULL,NULL);//宽字节编码转换成多字节编码
+			pFileName[len+1] = '/0';   //多字节字符以'/0'结束
+
+	2.Unicode下char *转换为CString
+		2.1
+			char * pFileName = "test";
+			int charLen = strlen(pFileName);	//计算char *数组大小，以字节为单位，一个汉字占两个字节
+			int len = MultiByteToWideChar(CP_ACP,0,pFileName,charLen,NULL,0); //计算多字节字符的大小，按字符计算。
+			TCHAR *buf = new TCHAR[len + 1]; //为宽字节字符数组申请空间，数组大小为按字节计算的多字节字符大小
+			MultiByteToWideChar(CP_ACP,0,pFileName,charLen,buf,len);	//多字节编码转换成宽字节编码
+			buf[len] = '/0'; //添加字符串结尾，注意不是len+1
+			CString pWideChar;//将TCHAR数组转换为CString
+			pWideChar.Append(buf);		
+			delete []buf;//删除缓冲区
+		2.2 
+			char * pFileName = "test"; 
+			USES_CONVERSION;
+			CString s = A2T(pFileName);
+			//CString s = A2W(pFileName);		
+	
+
+
+
+
+
+
 # MFC API
 	1.GetLength();
 	2.DoModel();
@@ -36,9 +74,10 @@ SSD固态硬盘常识
 		TIMERPROC lpTimerFunc // 回调函数
 		);		
 #Windows API
-	C.CFileFind class
+	C.CFile
+
+	C.CFileFind
 		
-		c1.GetLength();
 
 	C.
 		1.函数原型：
