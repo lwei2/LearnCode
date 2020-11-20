@@ -51,9 +51,12 @@
 		4.4 编译，即 > nmake && nmake install 
 		4.5 选择构建套件，Qt版本选择刚添加的静态版
 			4.5 配置套件时，需要下载WINSDK:https://download.microsoft.com/download/4/2/2/42245968-6A79-4DA7-A5FB-08C0AD0AE661/windowssdk/winsdksetup.exe,只选择Debugging Toolsfor Windows按照即可。套件就不会有感叹号！
-## 应用程序设置图标
-	1.创建.ico文件，将ico图标文件复制到工程文件夹。
-	2.修改项目文件.pro文件，添加RC_ICONS = xxx.ico
+## 不同平台下的应用程序设置图标
+	1.Linux平台
+	2.Windows平台
+		1.1创建.ico文件，将ico图标文件复制到工程文件夹。
+		1.2修改项目文件.pro文件，添加RC_ICONS = xxx.ico
+	3.MacOS平台
 
 ## Qt控件
 	QWidget类是所有用户界面对象的基类，被称为基础窗口部件。QWidget继承自QObject类和QPaintDevice类，其中QObject类是所有支持Qt对象模型（Qt Object Model）的Qt对象的的基类，QPaintDevice类是所有可以绘制的对象的基类。
