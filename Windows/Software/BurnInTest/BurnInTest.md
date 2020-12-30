@@ -65,7 +65,6 @@
 -S [scriptfilename]
 	[scriptfilename]可以是脚本文件的绝对或相对路径，但如果路径和/或文件名包含任何空格字符，你应该用双引号(" ")将整个字符串括起来。在这里了解更多关于脚本的信息。通常，-c<onfig file>与-s命令行参数一起使用。这将用一个特定的配置启动脚本，而不是PC上的当前配置(在LastUsed.bitcfg文件)。如果脚本包含REBOOT/REBOOTEND命令，指定BurnInTest的启动快捷方式(在重启后启动BurnInTest)不应该包含-c <配置文件>，在这种情况下，PC上的当前配置应该用于重启后脚本的继续。	
 
-
 -T
 	允许外部应用程序停止burntest测试。
 
@@ -100,6 +99,8 @@
 	命令与参数之间必须用一个或多个空格隔开。
 	可以通过以' # '字符开头的行来包含注释。
 	脚本的最大长度为300个字符。
+
+	
 ##EXECUTE COMMAND
 	Overview:
 	Executes an external file and continues processing the script.

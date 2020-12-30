@@ -431,7 +431,15 @@ int main(int argc, char**argv)
 GetBuffer(); 获取缓冲区至少几个字节。
 
 
-常用网址：
+#Windows磁盘容量计算
+	磁盘块/簇（虚拟出来的）。 块是操作系统中最小的逻辑存储单位。操作系统与磁盘打交道的最小单位是磁盘块。
+	扇区、块/簇、page的关系
+	扇区： 硬盘的最小读写单元
+	块/簇： 是操作系统针对硬盘读写的最小单元
+	page： 是内存与操作系统之间操作的最小单元。
+	扇区 <= 块/簇 <= page
+
+#常用网址：
 	1.https://wenku.baidu.com/view/73f3148ba200a6c30c22590102020740bf1ecd63.html?rec_flag=default
 	2.https://wenku.baidu.com/view/1f14d363974bcf84b9d528ea81c758f5f61f2985.html
 	3.http://www.elecfans.com/yuanqijian/jiekou/20180326652414_a.html

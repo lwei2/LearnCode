@@ -140,6 +140,11 @@ git merge brantest
 		# rm -rf .git/refs/original/
 		# git reflog expire --expire=now --all
 		# git gc --prune=now
+	以上办法若不能处理，则：
+		2.1 # git log
+			# git reset xxx（回退之前的好的）
+			# git push origin master
+
 
 #github
 192.30.253.113 github.com
