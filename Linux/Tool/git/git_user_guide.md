@@ -120,7 +120,7 @@ git merge brantest
 
 错误总结:
 =============
-1.提示：
+1.错误提示：
 	error: 无法推送一些引用到 'https://github.com/yourname/youname.github.io.git'
 	提示：更新被拒绝，因为远程版本库包含您本地尚不存在的提交。这通常是因为另外
 	提示：一个版本库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
@@ -128,7 +128,18 @@ git merge brantest
 	提示：详见 'git push -- help' 中的 'Note about fast-forwards' 小节。
 	处理办法：git push -u origin +master
 
-2.
+2.错误提示：
+	上传文件过大报错：remote: error: GH001: Large files detected.
+	处理办法：
+		2.1 重写commit，删除大文件
+		# git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch [Large files]' --prune-empty --tag-name-filter cat -- --all
+			#git stash	//报错
+		2.2 推送修改后的repo			
+		# git push origin master --force
+		2.3 清理和回收空间
+		# rm -rf .git/refs/original/
+		# git reflog expire --expire=now --all
+		# git gc --prune=now
 
 #github
 192.30.253.113 github.com

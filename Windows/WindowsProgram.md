@@ -22,6 +22,7 @@ SSD固态硬盘常识
 
 硬盘的读写
 	https://max.book118.com/html/2017/1204/142747942.shtm
+	
 
 #MFC基本数据类型
 	CString
@@ -58,12 +59,6 @@ SSD固态硬盘常识
 			CString s = A2T(pFileName);
 			//CString s = A2W(pFileName);		
 	
-
-
-
-
-
-
 # MFC API
 	1.GetLength();
 	2.DoModel();
@@ -96,6 +91,9 @@ SSD固态硬盘常识
 			);
 		2.函数参数			
 			-lpFileName String要打开的文件的名或设备名。这个字符串的最大长度在ANSI版本中为MAX_PATH，在unicode版本中为32767。
+				1)lpFileName在磁盘中的表现形式：
+					对于物理驱动器x，形式为 \\.\PhysicalDriveX ，编号从0开始。
+					对于逻辑分区（卷），形式为 \\.\X:。					
 			-dwDesiredAccess指定类型的访问对象，即访问模式（写 / 读） 。
 			如果为 GENERIC_READ 表示允许对设备进行读访问；如果为 GENERIC_WRITE 表示允许对设备进行写访问（可组合使用）；如果为零，表示只允许获取与一个设备有关的信息 。
 				GENERIC_READ - 读
@@ -114,7 +112,49 @@ SSD固态硬盘常识
 		3.函数返回值：
 			3.1 成功返回句柄
 			3.2 失败判断标志：INVALID_HANDLE_VALUE。通过GetLastError()获取错误码，具体参考GetLastError错误码列表。
+	C.CListCtrl
+		列表视图控件
+			typedef struct _LVCOLUMN 
+			{
+				UINT mask;            //说明此结构中哪些成员是有效的
+				int fmt;           //列的对齐方式
+				int cx;            //列的初始宽度
+				LPTSTR pszText; //列的标题
+				int cchTextMax;   //pszText所指向的缓冲区的大小
+				int iSubItem;      //与列关联的子项的索引值，从0开始
+				int iImage;           //与列关联的图像列表中指定图像的索引值
+				int iOrder;           //第几列，0代表最左一列
+				} LVCOLUMN, FAR *LPLVCOLUMN;
+				typedef struct _LVITEM {
+				UINT   mask;        //说明LVITEM结构中哪些成员有效
+				int    iItem;       //项目的索引值(可以视为行号)从0开始
+				int    iSubItem;    //子项的索引值(可以视为列号)从0开始
+				UINT   state;       //子项的状态
+				UINT   stateMask;   //状态有效的屏蔽位
+				LPTSTR pszText;   //主项或子项的名称
+				int    cchTextMax; //pszText所指向的缓冲区大小
+				int    iImage;       //关联图像列表中指定图像的索引值
+				LPARAM lParam;    //程序定义的32位参数
+				int iIndent;          //表示图像位置缩进的单位
+				} LVITEM, FAR *LPLVITEM;
 	C.CreateProcess
+		1.函数原型：BOOL CreateProcess
+					(
+						LPCTSTR lpApplicationName,
+						LPTSTR lpCommandLine,
+						LPSECURITY_ATTRIBUTES lpProcessAttributes,
+						LPSECURITY_ATTRIBUTES lpThreadAttributes,
+						BOOL bInheritHandles,
+						DWORD dwCreationFlags,
+						LPVOID lpEnvironment,
+						LPCTSTR lpCurrentDirectory,
+						LPSTARTUPINFO lpStartupInfo,
+						LPPROCESS_INFORMATIONlpProcessInformation
+					);
+		2.函数参数：		
+		3.函数返回值：			
+			如果函数执行成功，返回非零值。
+			如果函数执行失败，返回零，可以使用GetLastError函数获得错误的附加信息。
 	D.DeviceIoControl		
 		1.函数原型：BOOL WINAPI DeviceIoControl(
 				  _In_        HANDLE       hDevice,
@@ -127,16 +167,38 @@ SSD固态硬盘常识
 				  _Inout_opt_ LPOVERLAPPED lpOverlapped
 			);
 		2.函数参数：
-				hDevice [in] - 需要执行操作的设备句柄。该设备通常是卷，目录，文件或流，使用 CreateFile 函数打开获取设备句柄。具体的见备注
-		dwIoControlCode [in]操作的控制代码，该值标识要执行的特定操作以及执行该操作的设备的类型，有关控制代码的列表，请参考备注。每个控制代码的文档都提供了lpInBuffer，nInBufferSize，lpOutBuffer和nOutBufferSize参数的使用细节。
-		lpInBuffer [in, optional]
-    （可选）指向输入缓冲区的指针。这些数据的格式取决于dwIoControlCode参数的值。如果dwIoControlCode指定不需要输入数据的操作，则此参数可以为NULL。
-nInBufferSize [in]
-    	输入缓冲区以字节为单位的大小。单位为字节。
-lpOutBuffer [out, optional]
-    （可选）指向输出缓冲区的指针。这些数据的格式取决于dwIoControlCode参数的值。如果dwIoControlCode指定不返回数据的操作，则此参数可以为NULL。
-nOutBufferSize [in]
-    输出缓冲区以字节为单位的大小。单位为字节。
+				hDevice [in]
+					需要执行操作的设备句柄。该设备通常是卷，目录，文件或流，使用 CreateFile 函数打开获取设备句柄。具体的见备注
+				dwIoControlCode [in]
+					操作的控制代码，该值标识要执行的特定操作以及执行该操作的设备的类型，有关控制代码的列表，请参考备注。每个控制代码的文档都提供了lpInBuffer，nInBufferSize，lpOutB		uffer和nOutBufferSize参数的使用细节。
+					1）磁盘相关的控制代码:
+						IOCTL_DISK_CREATE_DISK-利用CREATE_DISK结构中的信息对指定磁盘和磁盘分区进行初始化。
+						IOCTL_DISK_DELETE_DRIVE_LAYOUT-从主引导记录中删除引导信息，所以磁盘将会被从头到尾的格式化。扇区0中的分区信息也就不复存在了。
+						IOCTL_DISK_FORMAT_TRACKS-格式化指定的、连续的软盘磁道。如果需要更多的功能请使用IOCTL_DISK_FORMAT_TRACKS_EX。
+						IOCTL_DISK_FORMAT_TRACKS_EX-格式化指定的、连续的软盘磁道。
+						IOCTL_DISK_GET_CACHE_INFORMATION-返回磁盘的高速缓存配置数据
+						IOCTL_DISK_GET_DRIVE_GEOMETRY_EX-返回物理磁盘的扩展信息。包括：类型、柱面数量、每柱面磁道数、每磁道扇区数和每扇区字节数等。
+						IOCTL_DISK_GET_DRIVE_LAYOUT_EX-返回各分区的扩展信息以及这些分区的特性。更多信息请参照DRIVE_LAYOUT_INFORMATION_EX结构。
+						IOCTL_DISK_GET_LENGTH_INFO-返回指定磁盘/卷/分区的大小信息
+						IOCTL_DISK_GET_PARTITION_INFO_EX-返回指定分区的扩展信息。包括：分区类型、大小和种类。更多信息请参照PARTITION_INFORMATION_EX结构。
+						IOCTL_DISK_GROW_PARTITION-扩大指定分区。
+						IOCTL_DISK_IS_WRITABLE-确定指定磁盘是否可写。
+						IOCTL_DISK_PERFORMANCE-启用并获取磁盘性能统计
+						IOCTL_DISK_PERFORMANCE_OFF-关闭磁盘性能统计
+						IOCTL_DISK_REASSIGN_BLOCKS-使磁盘设备影射一块区域做为它的备用存储块公用池（spare block pool）。
+						IOCTL_DISK_SET_CACHE_INFORMATION-设置磁盘的配置信息
+						IOCTL_DISK_SET_DRIVE_LAYOUT_EX-根据给定的磁盘信息对磁盘进行分区。
+						IOCTL_DISK_SET_PARTITION_INFO_EX-设置指定分区的分区信息。包括AT和EFI (Extensible Firmware Interface)分区的布局信息。
+						IOCTL_DISK_UPDATE_PROPERTIES-使缓冲的分区表无效并重新获取一份。
+						IOCTL_DISK_VERIFY-对指定磁盘进行逻辑格式化
+				lpInBuffer [in, optional]
+    				（可选）指向输入缓冲区的指针。这些数据的格式取决于dwIoControlCode参数的值。如果dwIoControlCode指定不需要输入数据的操作，则此参数可以为NULL。
+				nInBufferSize [in]
+    				输入缓冲区以字节为单位的大小。单位为字节。
+				lpOutBuffer [out, optional]
+    				（可选）指向输出缓冲区的指针。这些数据的格式取决于dwIoControlCode参数的值。如果dwIoControlCode指定不返回数据的操作，则此参数可以为NULL。
+				nOutBufferSize [in]
+    				输出缓冲区以字节为单位的大小。单位为字节。    				
 		3.函数返回值：
 	G.GetCurrentDirectory
 		0.函数功能：获取文件或程序当前路径

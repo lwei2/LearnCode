@@ -66,6 +66,7 @@
 ## Qt信号与槽机制
 	
 ## Qt多线程
+### 相关概念
 	1.程序和进程的区别
 		进程是动态的，程序是静态的；进程是暂时的，程序是永久的，进程是通过程序运行时得到的。
 		进程是一个数据文件，进程是内存中动态运行的运行实体，用来存储数据段、代码段、指针等。
@@ -112,6 +113,7 @@
 			int available () ;
 		5.4 释放由信号量保护的n个资源。
 			void release ( int n = 1 );
+### 巧记口诀
 
 ##Qt文件说明
 	在项目文件夹中生成的.pro.user文件，它包含了本地构建信息，包含Qt版本和构建目录等。
@@ -144,6 +146,265 @@ margin-left:10px;	左边界值
     1.重复调用update()会被Qt合并为一次
     2.不会产生图像闪烁
     3.可带参数指定重绘某个区域。
+
+##Qt支持的字体
+Qt 支持的中文字体的名称
+“Arial Unicode MS” 
+“Fixedsys” 
+“SimSun-ExtB” 
+“System” 
+“Terminal” 
+“仿宋” 
+“华文中宋” 
+“华文仿宋” 
+“华文宋体” 
+“华文彩云” 
+“华文新魏” 
+“华文楷体” 
+“华文琥珀” 
+“华文细黑” 
+“华文行楷” 
+“华文隶书” 
+“宋体” 
+“幼圆” 
+“微软雅黑” 
+“新宋体” 
+“方正姚体” 
+“方正舒体” 
+“楷体” 
+“隶书” 
+“黑体”
+
+代码：
+
+{
+    QFontDatabase database;
+    foreach(const QString &family, database.families(QFontDatabase::SimplifiedChinese))
+    {
+        qDebug() << family;
+    }
+}
+//以上这段代码就可以枚举出系统中所有支持中文的字体名称。
+
+Qt支持的其他字体的名称
+
+“Aharoni” 
+“Andalus” 
+“Angsana New” 
+“AngsanaUPC” 
+“Aparajita” 
+“Arabic Typesetting” 
+“Arial” 
+“Arial Black” 
+“Arial Narrow” 
+“Arial Unicode MS” 
+“Batang” 
+“BatangChe” 
+“Book Antiqua” 
+“Bookman Old Style” 
+“Bookshelf Symbol 7” 
+“Browallia New” 
+“BrowalliaUPC” 
+“Calibri” 
+“Calibri Light” 
+“Cambria” 
+“Cambria Math” 
+“Candara” 
+“Century” 
+“Century Gothic” 
+“Comic Sans MS” 
+“Consolas” 
+“Constantia” 
+“Corbel” 
+“Cordia New” 
+“CordiaUPC” 
+“Courier” 
+“Courier New” 
+“DaunPenh” 
+“David” 
+“DFKai-SB” 
+“DilleniaUPC” 
+“DokChampa” 
+“Dotum” 
+“DotumChe” 
+“Ebrima” 
+“Estrangelo Edessa” 
+“EucrosiaUPC” 
+“Euphemia” 
+“Fixedsys” 
+“Franklin Gothic Medium” 
+“FrankRuehl” 
+“FreesiaUPC” 
+“Gabriola” 
+“Garamond” 
+“Gautami” 
+“Georgia” 
+“Gisha” 
+“Gulim” 
+“GulimChe” 
+“Gungsuh” 
+“GungsuhChe” 
+“Impact” 
+“IrisUPC” 
+“Iskoola Pota” 
+“JasmineUPC” 
+“Kalinga” 
+“Kartika” 
+“Khmer UI” 
+“KodchiangUPC” 
+“Kokila” 
+“Lao UI” 
+“Latha” 
+“Leelawadee” 
+“Levenim MT” 
+“LilyUPC” 
+“Lucida Console” 
+“Lucida Sans Unicode” 
+“Malgun Gothic” 
+“Mangal” 
+“Marlett” 
+“Meiryo” 
+“Meiryo UI” 
+“Microsoft Himalaya” 
+“Microsoft JhengHei” 
+“Microsoft New Tai Lue” 
+“Microsoft PhagsPa” 
+“Microsoft Sans Serif” 
+“Microsoft Tai Le” 
+“Microsoft Uighur” 
+“Microsoft Yi Baiti” 
+“MingLiU” 
+“MingLiU-ExtB” 
+“MingLiU_HKSCS” 
+“MingLiU_HKSCS-ExtB” 
+“Miriam” 
+“Miriam Fixed” 
+“Modern” 
+“Mongolian Baiti” 
+“Monotype Corsiva” 
+“MoolBoran” 
+“MS Gothic” 
+“MS Mincho” 
+“MS Outlook” 
+“MS PGothic” 
+“MS PMincho” 
+“MS Reference Sans Serif” 
+“MS Reference Specialty” 
+“MS Sans Serif” 
+“MS Serif” 
+“MS UI Gothic” 
+“MT Extra” 
+“MV Boli” 
+“Narkisim” 
+“Nyala” 
+“Palatino Linotype” 
+“Plantagenet Cherokee” 
+“PMingLiU” 
+“PMingLiU-ExtB” 
+“Raavi” 
+“Rod” 
+“Roman” 
+“Sakkal Majalla” 
+“Script” 
+“Segoe Print” 
+“Segoe Script” 
+“Segoe UI” 
+“Segoe UI Light” 
+“Segoe UI Semibold” 
+“Segoe UI Symbol” 
+“Shonar Bangla” 
+“Shruti” 
+“Simplified Arabic” 
+“Simplified Arabic Fixed” 
+“SimSun-ExtB” 
+“Small Fonts” 
+“Sylfaen” 
+“Symbol” 
+“System” 
+“Tahoma” 
+“Terminal” 
+“Times New Roman” 
+“Traditional Arabic” 
+“Trebuchet MS” 
+“Tunga” 
+“Utsaah” 
+“Vani” 
+“Verdana” 
+“Vijaya” 
+“Vrinda” 
+“Webdings” 
+“Wingdings” 
+“Wingdings 2” 
+“Wingdings 3” 
+
+
+{
+    QFontDatabase database;
+    foreach(const QString &family, database.families())
+    {
+        qDebug() << family;
+    }
+}
+//以上这段代码就可以枚举出系统支持的所有字体的名称；
+
+中文字体名称对应的字体英文名称
+
+宋体 SimSun 
+黑体 SimHei 
+微软雅黑 Microsoft YaHei 
+微软正黑体 Microsoft JhengHei 
+新宋体 NSimSun 
+新细明体 PMingLiU 
+细明体 MingLiU 
+标楷体 DFKai-SB 
+仿宋 FangSong 
+楷体 KaiTi 
+仿宋_GB2312 FangSong_GB2312 
+楷体_GB2312 KaiTi_GB2312
+
+宋体：SimSuncss中中文字体（font-family）的英文名称 
+Mac OS的一些： 
+华文细黑：STHeiti Light [STXihei] 
+华文黑体：STHeiti 
+华文楷体：STKaiti 
+华文宋体：STSong 
+华文仿宋：STFangsong 
+儷黑 Pro：LiHei Pro Medium 
+儷宋 Pro：LiSong Pro Light 
+標楷體：BiauKai 
+蘋果儷中黑：Apple LiGothic Medium 
+蘋果儷細宋：Apple LiSung Light 
+Windows的一些： 
+新細明體：PMingLiU 
+細明體：MingLiU 
+標楷體：DFKai-SB 
+黑体：SimHei 
+新宋体：NSimSun 
+仿宋：FangSong 
+楷体：KaiTi 
+仿宋_GB2312：FangSong_GB2312 
+楷体_GB2312：KaiTi_GB2312 
+微軟正黑體：Microsoft JhengHei 
+微软雅黑体：Microsoft YaHei 
+装Office会生出来的一些： 
+隶书：LiSu 
+幼圆：YouYuan 
+华文细黑：STXihei 
+华文楷体：STKaiti 
+华文宋体：STSong 
+华文中宋：STZhongsong 
+华文仿宋：STFangsong 
+方正舒体：FZShuTi 
+方正姚体：FZYaoti 
+华文彩云：STCaiyun 
+华文琥珀：STHupo 
+华文隶书：STLiti 
+华文行楷：STXingkai 
+华文新魏：STXinwei
+
+##加载第三方字体
+	
+
 
 
 ## 常见错误小结
