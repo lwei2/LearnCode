@@ -102,8 +102,7 @@
 
 	
 ##EXECUTE COMMAND
-	Overview:
-	Executes an external file and continues processing the script.
+	概述:执行外部文件并继续处理脚本。
 	Syntax:
 		EXECUTE <Filename> <Parameters>
 	Parameters:	
@@ -115,7 +114,8 @@
 		RUN CONFIG
 
 
-
+##EXECUTEWAIT命令
+	概述:运行一个可执行文件，并在继续处理脚本之前等待该进程完成
 
 
 
