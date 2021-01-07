@@ -1,6 +1,9 @@
 #Qt例子
 HelloWorld
-# 
+#常用例子
+	QDialog.
+		QDialog0012-自绘对话框(画椭圆)
+#模型例子	
 	1.树模型
 		Treemodel0001
 #生产者和消费者问题

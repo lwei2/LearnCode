@@ -1,0 +1,2 @@
+#QSplitter Class
+	QSplitter类实现了一个splitter小部件
