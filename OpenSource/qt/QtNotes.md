@@ -68,14 +68,43 @@
 	2. 絕對位置：pWidget->mapToGlobal(QPoint(0,0)) ;將當前控件的相對位置轉換為屏幕絕對位置
 	3. 絕對位置轉為相對位置： pWidget->mapFromGlobal(QPoint(0,0)), 將絕對位置對應到控件的相對位置
 
+
+###QTableWidget
+	QTableWidget *pTableView;
+	1.设置列数：
+		pTableView->setColumnCount(int columns);//columns列数
+	2.设置默认列表尺寸：
+		horizontalHeader()->setDefaultSectionSize(大小);
+	3.设置表头文字
+		setHorizontalHeaderLabels(QStringList &header);
+	4.设置列布满控件
+		horizontalHeader()->setStretchLastSection(true);
+	5.设置默认列大小
+		verticalHeader()->setDefaultSectionSize(10);
+	6.设置无边框
+		setFrameShape(QFrame::NoFrame);
+	7.设置去掉格子线
+		setShowGrid(false);
+	8.设置多选
+		setSelectionMode(QAbstractItemView::ExtendedSelection);
+	9.设置垂直头不可见
+		pTableView->verticalHeader()->setVisible(false);		
+	10.设置选择行时为单行
+		m_pTableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+	11.不可编辑
+		m_pTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	12.		
+
 ###巧记口诀
 @控件
 	布局格式分天下，横竖网络表分组。
 	水平垂直间隔中，六大按钮聚一堂。
-	PTRCD点击触发，基础模型看视图。
+	PTRCD一触即发，基础模型看视图。
 	列表树列撤销行，基础控件列树表。
 @特殊
 	横竖坐标x与y，二者合为一点点。
+
+
 
 
 ## Qt信号与槽机制
@@ -166,6 +195,13 @@ margin-left:10px;	左边界值
     1.重复调用update()会被Qt合并为一次
     2.不会产生图像闪烁
     3.可带参数指定重绘某个区域。
+
+##事件
+
+
+###拖拽事件
+	拖放（Drag and Drop），通常會簡稱為DnD，是現代軟件開發中必不可少的一項技術。它提供了一種能夠在應用程序內部甚至是應用程序之間進行信息交換的機制。操作系統與應用程序之間進行的剪貼板內容的交換，也可以被認為是拖放的一部分。
+	拖放其實是由兩部分組成的：拖動和釋放。拖動是將被拖放對象進行移動，釋放是將被拖放對象放下。前者是一個按下鼠標按鍵並移動的過程，後者是一個鬆開鼠標按鍵的過程；通常這兩個操作之間的鼠標按鍵是被一直按下的。當然，這只是一種普遍的情況，其它情況還是要看應用程序的具體實現。對於Qt 而言，一個組件既可以作為被拖動對象進行拖動，也可以作為釋放掉的目的地對象，或者二者都是。
 
 ##Qt支持的字体
 Qt 支持的中文字体的名称
@@ -433,4 +469,8 @@ Windows的一些：
 	2.Qt Run-time Check Failure #2
 		内存越界
 		
-
+##不懂
+	mapToGlobal和mapFromGlobal
+	相對位置：每個Qwidget都能通過pos()獲取到相對自己父類窗口的位置，
+	絕對位置：pWidget->mapToGlobal(QPoint(0,0)) ;將當前控件的相對位置轉換為屏幕絕對位置
+	絕對位置轉為相對位置： pWidget->mapFromGlobal(QPoint(0,0)), 將絕對位置對應到控件的相對位置

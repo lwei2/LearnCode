@@ -5,11 +5,13 @@
 	2.csdn知识库：			
 		http://lib.csdn.net/home
 
+
 	3.相关论坛
 		3.1 https://bbs.bccn.net/
 		3.2 https://www.cctry.com/
 		3.3 http://www.codeforge.cn/
 		3.3 http://www.bathome.net/index.php
+		3.4 https://www.haolizi.net/
 
 # 常用代码托管平台
 	1.Github:				
@@ -28,6 +30,9 @@
 #常用工具网址
 	1.https://www.upantool.com/?top
 
+
+#math
+	1.https://bbs.emath.ac.cn/forum.php
 
 # 刷题库
 	1.https://www.nowcoder.com/
@@ -57,6 +62,8 @@ C++在线编译器
 	3.https://iconstore.co/
 	4.https://www.manypixels.co/gallery/
 	5.https://www.stockio.com/
+	6.http://www.bootstrapmb.com/(收费)
+	7.https://codepen.io/（ui设计）
 字体颜色网址
     1.https://encycolorpedia.cn/
     2.http://www.zhongguosou.com/computer_question_tools/color_standard_web.html
