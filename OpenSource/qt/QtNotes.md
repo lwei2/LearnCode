@@ -59,16 +59,272 @@
 
 ## Qt控件
 
+	2.QGridLayout
+	1.QWidget
+	2.QTableWidget
+
 	QWidget类是所有用户界面对象的基类，被称为基础窗口部件。QWidget继承自QObject类和QPaintDevice类，其中QObject类是所有支持Qt对象模型（Qt Object Model）的Qt对象的的基类，QPaintDevice类是所有可以绘制的对象的基类。
-
-
 	QImage和QPixmap区别：QPixmap是专门为绘图而生，当需要绘制图片时你需要使用QPixmap。QImage则是为I/O，为图片像素访问以及修改而设计的。如果你想访问图片的像素或是修改图片像素，则需要使用QImage，或者借助于QPainter来操作像素。另外跟QImage不同是，QPixmap跟硬件是相关的，如X11, Mac 以及 Symbian平台上，QPixmap 是存储在服务器端，而QImage则是存储在客户端，在Windows平台上，QPixmap和QImage都是存储在客户端，并不使用任何的GDI资源。
 
 	1. 相對位置：每個Qwidget都能通過pos()獲取到相對自己父類窗口的位置，
 	2. 絕對位置：pWidget->mapToGlobal(QPoint(0,0)) ;將當前控件的相對位置轉換為屏幕絕對位置
 	3. 絕對位置轉為相對位置： pWidget->mapFromGlobal(QPoint(0,0)), 將絕對位置對應到控件的相對位置
 
+###巧记口诀
+@控件
+	布局格式分天下，横竖网络表分组。	
+	水平垂直间隔中，六大按钮聚一堂。
+	PTRCD一触即发，基础模型看视图。
+	列表树列撤销行，基础控件列树表。
+@特殊
+	横竖坐标x与y，二者合为一点点。
 
+###QComboBox
+	QComboBox *pComboBox;
+	1.去掉控件直角
+	pComboBox->view()->window()->setWindowFlags(Qt::Popup | Qt::FramelessWindowHint | Qt::NoDropShadowWindowHint);		
+	2.
+
+###QGridLayout
+	QGridLayout *pGridLayout = new QGridLayout;
+	1.设置间距(水平或垂直)
+		pGridLayout->setSpacing
+		setSpacing()可以同时设置水平、垂直间距，设置之后，水平、垂直间距相同。
+		setHorizontalSpacing()、setVerticalSpacing()可以分别设置水平间距、垂直间距。
+	1.设置布局内部四边的空隙
+		pGridLayout->setContentsMargins(int x, int y, int w, int h);
+
+###QLineEdit
+	QLineEdit *pLineEdit = new QLineEdit;
+	1.设置字体
+		pLineEdit->setFont(QFont("字体",字体大小，粗细));
+		pLineEdit->setFont(QFont("Timers" , 28 ,  QFont::Bold));
+	2.设置无右键菜单
+		pLineEdit->setContextMenuPolicy(Qt::NoContextMenu);
+	3.设置提示语
+		pLineEdit->setPlaceholderText(QString("提示语"));
+	4.设置密码模式不可见
+		pLineEdit->setEchoMode(QLineEdit::Password);
+	5.设置样式
+		pLineEdit->setStyleSheet("QLineEdit{border-width: 1px; border-radius: 4px; font-size:12px; color: black; border:1px solid gray;}"
+  "QLineEdit:hover{border-width: 1px; border-radius: 4px; font-size:12px; color: black; border:1px solid rgb(70, 200, 50);}");
+ 	6.设置最大位数
+ 		pLineEdit->setMaxLength(int n);
+ 		focusout
+###QLayout
+	1.oid QLayout::setContentsMargins （ int left， int top， int right， int bottom ）
+	左上右下
+
+###QDirModel
+	QDirModel *pDirModel = new QDirModel(this);
+	1.设置当前路径为默认路径：
+	pDirModel->index(int row, int column, QModelIndex());//QDir::currentPath();
+
+###QPushButton
+	1.设置样式
+		1.1 黑色悬停
+	/* Black Button 1*/
+	QPushButton#BlackButton {
+	    border-radius: 8px;
+	    color: white;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    background-color: white;
+	    color: black;
+	    border: 2px solid #555555;
+	}
+	QPushButton#BlackButton:hover {
+	    background-color: #555555;
+	    color: white;
+	}
+	QPushButton#BlackButton:pressed {
+	    background-color: #06AD56;
+	}
+	/* Black Button 2 */
+	QPushButton#BlackButton2 {
+	    background-color: #555555;
+	    border-radius: 8px;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    color: white;
+	}
+	QPushButton#BlackButton2:hover {
+	    background-color: white;
+	    border: 2px solid #555555;
+	    color: black
+	}
+	QPushButton#BlackButton2:pressed {
+	    background-color: #06AD56;
+	}
+	1.2 灰色悬停
+	/* Gray Button */
+	QPushButton#GrayButton {
+	    border-radius: 8px;
+	    color: white;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    background-color: white;
+	    color: black;
+	    border: 2px solid #e7e7e7;
+	}
+	QPushButton#GrayButton:hover {
+	    background-color: #e7e7e7;
+	    color: white;
+	}
+	QPushButton#GrayButton:pressed {
+	    background-color: #06AD56;
+	}		
+	/* Gray Button 2 */
+	QPushButton#GrayButton2 {
+	    background-color: #e7e7e7;
+	    border-radius: 8px;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    color: white;
+	}
+	QPushButton#GrayButton2:hover {
+	    background-color: white;
+	    border: 2px solid #e7e7e7;
+	    color: black
+	}
+	QPushButton#GrayButton2:pressed {
+	    background-color: #06AD56;
+	}
+	1.3 红色悬停
+	/* Red Button */
+	QPushButton#RedButton {
+	    border-radius: 8px;
+	    color: white;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    background-color: white;
+	    color: black;
+	    border: 2px solid #f44336;
+	}
+	QPushButton#RedButton:hover {
+	    background-color: #f44336;
+	    color: white;
+	}
+	QPushButton#RedButton:pressed {
+	    background-color: #06AD56;
+	}
+	/* Red Button 2 */
+	QPushButton#RedButton2 {
+	    background-color: #f44336;
+	    border-radius: 8px;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    color: white;
+	}
+	QPushButton#RedButton2:hover {
+	    background-color: white;
+	    border: 2px solid #f44336;
+	    color: black
+	}
+	QPushButton#RedButton2:pressed {
+	    background-color: #06AD56;
+	}
+	1.4 蓝色悬停
+	/* Blue Button */
+	QPushButton#BlueButton {
+	    border-radius: 8px;
+	    color: white;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    background-color: white;
+	    color: black;
+	    border: 2px solid #008cba;
+	}
+	QPushButton#BlueButton:hover {
+	    background-color: #008cba;
+	    color: white;
+	}
+	QPushButton#BlueButton:pressed {
+	    background-color: #06AD56;
+	}
+	/* Blue Button 2 */
+QPushButton#BlueButton2 {
+    background-color: #008cba;
+    border-radius: 8px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    color: white;
+}
+QPushButton#BlueButton2:hover {
+    background-color: white;
+    border: 2px solid #008cba;
+    color: black
+}
+QPushButton#BlueButton2:pressed {
+    background-color: #06AD56;
+}
+	1.5绿色悬停
+	/* Green Button */
+	QPushButton#GreenButton {
+	    border-radius: 8px;
+	    color: white;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    background-color: white;
+	    color: black;
+	    border: 2px solid #4CAF50;
+	}
+	QPushButton#GreenButton:hover {
+	    background-color: #4CAF50;
+	    color: white;
+	}
+	QPushButton#GreenButton:pressed {
+	    background-color: #06AD56;
+	}		
+	/* Green Button 2 */
+	QPushButton#GreenButton2 {
+	    background-color: #4CAF50;
+	    border-radius: 8px;
+	    padding: 16px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    font-size: 16px;
+	    margin: 4px 2px;
+	    color: white;
+	}
+	QPushButton#GreenButton2:hover {
+	    background-color: white;
+	    border: 2px solid #4CAF50;
+	    color: black
+	}
+	QPushButton#GreenButton2:pressed {
+	    background-color: #06AD56;
+	}
+
+###QTableView
+	1.		
 ###QTableWidget
 	QTableWidget *pTableView;
 	1.设置列数：
@@ -76,7 +332,10 @@
 	2.设置默认列表尺寸：
 		horizontalHeader()->setDefaultSectionSize(大小);
 	3.设置表头文字
-		setHorizontalHeaderLabels(QStringList &header);
+		调用函数：setHorizontalHeaderLabels(QStringList &header);
+		实现例子：	QStringList header;
+					header<<Item1<<Item2<<Item3<<……；
+					pTableView->setHorizontalHeaderLabels(header);
 	4.设置列布满控件
 		horizontalHeader()->setStretchLastSection(true);
 	5.设置默认列大小
@@ -93,19 +352,51 @@
 		m_pTableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
 	11.不可编辑
 		m_pTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
-	12.		
+	12.去掉表头
+		m_pTableWidget->horizontalHeader()->setVisible(false);//去掉表头
+		m_pTableWidget->verticalHeader()->setVisible(false);
+	13.合并单元格
+		m_pTableWidget->setSpan(x,y,width, heigth);//x-横坐标，y-纵坐标，width-要改变的行数，heigth-要改变的列数
+	14.自适应
+		m_pTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    	m_pTableWidget->horizontalHeader()->setSectionResizeMode(0,QHeaderView::Stretch);
+    15.增加
+    16.删除行
+    	m_pTableWidget->removeRow(m_pTableWidget->currentRow());//当前行
 
-###巧记口诀
-@控件
-	布局格式分天下，横竖网络表分组。
-	水平垂直间隔中，六大按钮聚一堂。
-	PTRCD一触即发，基础模型看视图。
-	列表树列撤销行，基础控件列树表。
-@特殊
-	横竖坐标x与y，二者合为一点点。
+
+###QSplitter
+	QSplitter	*pSplitter = new QSplitter;
+	1.添加控件：
+		QSplitter->addWidget(QWidget *);
+	2.分割比例
+		QSplitter->setStretchFactor(int index, int stretch);//index-分割区域，stretch-分割比例
+###QSpacerItem
 
 
 
+
+
+
+## Qt的事件循环机制
+	Qt中常见的事件有哪些？鼠标事件(QMouseEvent)、键盘事件(QKeyEvent)、绘制事件(QPaintEvent)、窗口尺寸改变(QResizeEvent)、滚动事件(QScrollEvent)、控件显示(QShowEvent)、控件隐藏(QHideEvent)、定时器事件(QTimerEvent)等等
+	Qt是事件驱动的，Qt将系统产生的信号(软件中断)转换成Qt事件，并且将事件封装成类，所有的事件类都是由QEvent派生的，事件的产生和处理就是Qt程序的主轴，且伴随着整个程序的运行周期。因此我们说，Qt是事件驱动的。
+
+问题3：Qt事件是由谁产生的？Qt是如何将信号转换成事件的？
+
+	答：Qt的官方手册说，事件有两个来源：程序外部和程序内部，多数情况下来自操作系统并且通过spontaneous()函数返回true来获知事件来自于程序外部，当spontaneous()返回false时说明事件来自于程序内部。
+
+问题4：Qt事件是由谁接收的？
+
+答：QObject！它是所有Qt类的基类！是Qt对象模型的核心！QObject类的三大核心功能其中之一就是：事件处理。QObject通过event()函数调用获取事件。所有的需要处理事件的类都必须继承自Qobject，可以通过重定义event()函数实现自定义事件处理或者将事件交给父类。
+
+问题5：事件处理的流程是什么样的？
+
+答：事件有别于信号的重要一点：事件是一个类对象具有特定的类型，事件多数情况下是被分发到一个队列中(事件队列)，当队列中有事件时就不停的将队列中的事件发送给QObject对象，当队列为空时就阻塞地等待事件，这个过程就是事件循环！
+
+QCoreApplication::exec()开启了这种循环，一直到QCoreApplication::exit()被调用才终止，所以说事件循环是伴随着Qt程序的整个运行周期！
+
+另外一种同步处理情形是通过sendEvent()将事件发送出去，直接进入事件的传送和处理流程。
 
 ## Qt信号与槽机制
 	
