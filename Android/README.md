@@ -1,11 +1,11 @@
 Android
-==== 
+===========================
 Android初识和了解
--------
+---------------------------
 	欢迎进入Android世界！
 
 Android系统特性与平台架构
--------
+---------------------------
 	系统特性：
 	*应用程序框架支持组件的重用与替换（app发布时遵守了框架的约定，其他app也可以使用该模块）
 	*Dalvik虚拟机:专门为移动设备优化 -集成的浏览器:开源的WebKit引擎
@@ -19,6 +19,6 @@ Android系统特性与平台架构
 	4.Linux内核 这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等
 
 Android相关网址
--------
+---------------------------
 	Android官网： https://developer.android.google.cn/index.html
 	Android官网： https://developer.android.com/index.html 
