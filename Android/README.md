@@ -1,9 +1,11 @@
-#Android
+Android
+==== 
+Android初识和了解
+-------
+	欢迎进入Android世界！
 
-Android官网： https://developer.android.google.cn/index.html
-Android官网： https://developer.android.com/index.html 
-
-#Android系统特性与平台架构
+Android系统特性与平台架构
+-------
 	系统特性：
 	*应用程序框架支持组件的重用与替换（app发布时遵守了框架的约定，其他app也可以使用该模块）
 	*Dalvik虚拟机:专门为移动设备优化 -集成的浏览器:开源的WebKit引擎
@@ -15,3 +17,8 @@ Android官网： https://developer.android.com/index.html
 	3.Libraries(库) + Android Runtime(Android运行时) Android给我们提供了一组C/C++库，为平台的不同组件所使用，比如媒体框架；而Android Runtime则由Android核心库集 + Dalvik虚拟机构成，Dalvik虚拟机是针对移动设备的虚拟机，它的特点:不需要很快的CPU计算速度和大量的内存空间;而每个App都单	独地运行在单独的Dalvik虚拟机内每个app对于一条Dalvik进程）而他的简单运行流程如：
 	通过DX工具->将App所有的class文件打包-编译->.dex文件->Dalvik则运行该文件
 	4.Linux内核 这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等
+
+Android相关网址
+-------
+	Android官网： https://developer.android.google.cn/index.html
+	Android官网： https://developer.android.com/index.html 
