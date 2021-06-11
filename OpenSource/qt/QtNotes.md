@@ -1,4 +1,5 @@
-#Qt
+Qt
+===========================
 	第一章. Qt简介
 	第二章.
 
@@ -750,7 +751,9 @@ Windows的一些：
 华文新魏：STXinwei
 
 ##加载第三方字体
-	
+	https://fontstorage.com
+	https://www.dafont.com/
+	https://www.fonts.com/font/monotype/arial/medium
 
 
 
