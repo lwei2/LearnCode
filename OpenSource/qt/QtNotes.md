@@ -497,31 +497,31 @@ margin-left:10px;	左边界值
 
 ##Qt支持的字体
 Qt 支持的中文字体的名称
-“Arial Unicode MS” 
-“Fixedsys” 
-“SimSun-ExtB” 
-“System” 
-“Terminal” 
-“仿宋” 
-“华文中宋” 
-“华文仿宋” 
-“华文宋体” 
-“华文彩云” 
-“华文新魏” 
-“华文楷体” 
-“华文琥珀” 
-“华文细黑” 
-“华文行楷” 
-“华文隶书” 
-“宋体” 
-“幼圆” 
-“微软雅黑” 
-“新宋体” 
-“方正姚体” 
-“方正舒体” 
-“楷体” 
-“隶书” 
-“黑体”
+	“Arial Unicode MS” 
+	“Fixedsys” 
+	“SimSun-ExtB” 
+	“System” 
+	“Terminal” 
+	“仿宋” 
+	“华文中宋” 
+	“华文仿宋” 
+	“华文宋体” 
+	“华文彩云” 
+	“华文新魏” 
+	“华文楷体” 
+	“华文琥珀” 
+	“华文细黑” 
+	“华文行楷” 
+	“华文隶书” 
+	“宋体” 
+	“幼圆” 
+	“微软雅黑” 
+	“新宋体” 
+	“方正姚体” 
+	“方正舒体” 
+	“楷体” 
+	“隶书” 
+	“黑体”
 
 代码：
 
@@ -754,7 +754,17 @@ Windows的一些：
 	https://fontstorage.com
 	https://www.dafont.com/
 	https://www.fonts.com/font/monotype/arial/medium
+	https://imageshack.com/
 
+字体库转换
+	https://convertio.co/zh/font-converter/
+
+
+##不懂
+	mapToGlobal和mapFromGlobal
+	相對位置：每個Qwidget都能通過pos()獲取到相對自己父類窗口的位置，
+	絕對位置：pWidget->mapToGlobal(QPoint(0,0)) ;將當前控件的相對位置轉換為屏幕絕對位置
+	絕對位置轉為相對位置： pWidget->mapFromGlobal(QPoint(0,0)), 將絕對位置對應到控件的相對位置
 
 
 ## 常见错误小结
@@ -763,8 +773,3 @@ Windows的一些：
 	2.Qt Run-time Check Failure #2
 		内存越界
 		
-##不懂
-	mapToGlobal和mapFromGlobal
-	相對位置：每個Qwidget都能通過pos()獲取到相對自己父類窗口的位置，
-	絕對位置：pWidget->mapToGlobal(QPoint(0,0)) ;將當前控件的相對位置轉換為屏幕絕對位置
-	絕對位置轉為相對位置： pWidget->mapFromGlobal(QPoint(0,0)), 將絕對位置對應到控件的相對位置
