@@ -79,6 +79,7 @@ Qt
 	列表树列撤销行，基础控件列树表。
 @特殊
 	横竖坐标x与y，二者合为一点点。
+	
 
 ###QComboBox
 	QComboBox *pComboBox;
