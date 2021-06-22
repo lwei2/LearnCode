@@ -1,4 +1,5 @@
 Windows程序
+===========================
 1.windows程序以WinMain()作为入口函数,控制台程序以main()作为入口函数，动态连接库以DllMain()作为入口函数。
 Windows程序编译环境
 	Windows环境下
@@ -23,6 +24,29 @@ SSD固态硬盘常识
 硬盘的读写
 	https://max.book118.com/html/2017/1204/142747942.shtm
 	
+windows.h 是一个最重要的包含文件，它囊括了若干其他 Windows 头文件，其中的某些头文件又包含另外的一些头文件。
+
+下列几个是最重要也是最基本的头文件:
+
+WINDEF.H 基本数据类型定义。
+WINNT.H 支持 Unicode的类型定义。
+WINBASE.H 内核函数。
+WINUSER.H 用户界面函数。
+WINGDI.H 图形设备接口函数。
+这些头文件定义了 Windows 的所有数据类型、函数调用、数据结构以及常量标识符。
+
+1）   设计一个窗口类
+2）   注册窗口类
+3）   创建窗口
+4）   显示及更新窗口
+5）   消息循环  
+
+0~0x03ff - 系统定义的消息
+
+IOCTL_DISK_GET_DRIVE_GEOMETRY 获取设备参数
+
+硬盘标准接口：IDE\AHCI\NVMe
+
 
 #MFC基本数据类型
 	CString
