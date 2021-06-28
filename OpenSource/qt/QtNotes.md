@@ -58,8 +58,11 @@ Qt
 		1.2修改项目文件.pro文件，添加RC_ICONS = xxx.ico
 	3.MacOS平台
 
-## Qt控件
-
+# Qt控件
+	Q
+	QFont
+	设置字体
+	setStyleName
 	2.QGridLayout
 	1.QWidget
 	2.QTableWidget
