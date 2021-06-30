@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>file/yourfile.xlsx</file>
+    </qresource>
+    <qresource prefix="/file"/>
+</RCC>
