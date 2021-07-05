@@ -540,158 +540,6 @@ Qt 支持的中文字体的名称
 }
 //以上这段代码就可以枚举出系统中所有支持中文的字体名称。
 
-Qt支持的其他字体的名称
-
-“Aharoni” 
-“Andalus” 
-“Angsana New” 
-“AngsanaUPC” 
-“Aparajita” 
-“Arabic Typesetting” 
-“Arial” 
-“Arial Black” 
-“Arial Narrow” 
-“Arial Unicode MS” 
-“Batang” 
-“BatangChe” 
-“Book Antiqua” 
-“Bookman Old Style” 
-“Bookshelf Symbol 7” 
-“Browallia New” 
-“BrowalliaUPC” 
-“Calibri” 
-“Calibri Light” 
-“Cambria” 
-“Cambria Math” 
-“Candara” 
-“Century” 
-“Century Gothic” 
-“Comic Sans MS” 
-“Consolas” 
-“Constantia” 
-“Corbel” 
-“Cordia New” 
-“CordiaUPC” 
-“Courier” 
-“Courier New” 
-“DaunPenh” 
-“David” 
-“DFKai-SB” 
-“DilleniaUPC” 
-“DokChampa” 
-“Dotum” 
-“DotumChe” 
-“Ebrima” 
-“Estrangelo Edessa” 
-“EucrosiaUPC” 
-“Euphemia” 
-“Fixedsys” 
-“Franklin Gothic Medium” 
-“FrankRuehl” 
-“FreesiaUPC” 
-“Gabriola” 
-“Garamond” 
-“Gautami” 
-“Georgia” 
-“Gisha” 
-“Gulim” 
-“GulimChe” 
-“Gungsuh” 
-“GungsuhChe” 
-“Impact” 
-“IrisUPC” 
-“Iskoola Pota” 
-“JasmineUPC” 
-“Kalinga” 
-“Kartika” 
-“Khmer UI” 
-“KodchiangUPC” 
-“Kokila” 
-“Lao UI” 
-“Latha” 
-“Leelawadee” 
-“Levenim MT” 
-“LilyUPC” 
-“Lucida Console” 
-“Lucida Sans Unicode” 
-“Malgun Gothic” 
-“Mangal” 
-“Marlett” 
-“Meiryo” 
-“Meiryo UI” 
-“Microsoft Himalaya” 
-“Microsoft JhengHei” 
-“Microsoft New Tai Lue” 
-“Microsoft PhagsPa” 
-“Microsoft Sans Serif” 
-“Microsoft Tai Le” 
-“Microsoft Uighur” 
-“Microsoft Yi Baiti” 
-“MingLiU” 
-“MingLiU-ExtB” 
-“MingLiU_HKSCS” 
-“MingLiU_HKSCS-ExtB” 
-“Miriam” 
-“Miriam Fixed” 
-“Modern” 
-“Mongolian Baiti” 
-“Monotype Corsiva” 
-“MoolBoran” 
-“MS Gothic” 
-“MS Mincho” 
-“MS Outlook” 
-“MS PGothic” 
-“MS PMincho” 
-“MS Reference Sans Serif” 
-“MS Reference Specialty” 
-“MS Sans Serif” 
-“MS Serif” 
-“MS UI Gothic” 
-“MT Extra” 
-“MV Boli” 
-“Narkisim” 
-“Nyala” 
-“Palatino Linotype” 
-“Plantagenet Cherokee” 
-“PMingLiU” 
-“PMingLiU-ExtB” 
-“Raavi” 
-“Rod” 
-“Roman” 
-“Sakkal Majalla” 
-“Script” 
-“Segoe Print” 
-“Segoe Script” 
-“Segoe UI” 
-“Segoe UI Light” 
-“Segoe UI Semibold” 
-“Segoe UI Symbol” 
-“Shonar Bangla” 
-“Shruti” 
-“Simplified Arabic” 
-“Simplified Arabic Fixed” 
-“SimSun-ExtB” 
-“Small Fonts” 
-“Sylfaen” 
-“Symbol” 
-“System” 
-“Tahoma” 
-“Terminal” 
-“Times New Roman” 
-“Traditional Arabic” 
-“Trebuchet MS” 
-“Tunga” 
-“Utsaah” 
-“Vani” 
-“Verdana” 
-“Vijaya” 
-“Vrinda” 
-“Webdings” 
-“Wingdings” 
-“Wingdings 2” 
-“Wingdings 3” 
-
-
 {
     QFontDatabase database;
     foreach(const QString &family, database.families())
@@ -700,62 +548,32 @@ Qt支持的其他字体的名称
     }
 }
 //以上这段代码就可以枚举出系统支持的所有字体的名称；
+##正则表达式
+###正则表达式定义
+	正则表达式（regular expression）是用一个“字符串”来描述一个特征，然后去验证另一个“字符串”是否符合这个特征。
+	正则表达式可以用来：
+		*验证字符串是否符合指定特征，比如验证是否是合法的邮件地址。
+		*用来查找字符串，从一个长的文本中查找符合指定特征的字符串，比查找固定字符串更加灵活方便。
+		*用来替换，比普通的替换更强大。
+###正则表达式规则
+	普通字符：字母、数字、下划线。
+	简单的转义字符：
+	\r, \n            代表回车和换行符
+	\t                制表符
+	\\                代表 "\" 本身
+	\^                匹配 ^ 符号本身
+	\$                匹配 $ 符号本身
+	\.                匹配小数点（.）本身
 
-中文字体名称对应的字体英文名称
-
-宋体 SimSun 
-黑体 SimHei 
-微软雅黑 Microsoft YaHei 
-微软正黑体 Microsoft JhengHei 
-新宋体 NSimSun 
-新细明体 PMingLiU 
-细明体 MingLiU 
-标楷体 DFKai-SB 
-仿宋 FangSong 
-楷体 KaiTi 
-仿宋_GB2312 FangSong_GB2312 
-楷体_GB2312 KaiTi_GB2312
-
-宋体：SimSuncss中中文字体（font-family）的英文名称 
-Mac OS的一些： 
-华文细黑：STHeiti Light [STXihei] 
-华文黑体：STHeiti 
-华文楷体：STKaiti 
-华文宋体：STSong 
-华文仿宋：STFangsong 
-儷黑 Pro：LiHei Pro Medium 
-儷宋 Pro：LiSong Pro Light 
-標楷體：BiauKai 
-蘋果儷中黑：Apple LiGothic Medium 
-蘋果儷細宋：Apple LiSung Light 
-Windows的一些： 
-新細明體：PMingLiU 
-細明體：MingLiU 
-標楷體：DFKai-SB 
-黑体：SimHei 
-新宋体：NSimSun 
-仿宋：FangSong 
-楷体：KaiTi 
-仿宋_GB2312：FangSong_GB2312 
-楷体_GB2312：KaiTi_GB2312 
-微軟正黑體：Microsoft JhengHei 
-微软雅黑体：Microsoft YaHei 
-装Office会生出来的一些： 
-隶书：LiSu 
-幼圆：YouYuan 
-华文细黑：STXihei 
-华文楷体：STKaiti 
-华文宋体：STSong 
-华文中宋：STZhongsong 
-华文仿宋：STFangsong 
-方正舒体：FZShuTi 
-方正姚体：FZYaoti 
-华文彩云：STCaiyun 
-华文琥珀：STHupo 
-华文隶书：STLiti 
-华文行楷：STXingkai 
-华文新魏：STXinwei
-
+###
+	QRegExp是Qt的正则表达式类。Qt中有两个不同类的正则表达式。第一类为元字符.它表示一个或多个常量表达式。另一类为转义字符,它代表一个特殊字符。
+	.      匹配任意单个字符.                 例如, 1.3 可能是1. 后面跟任意字符,再跟3
+	^     匹配字符串首.                        例如, ^12可能是123,但不能是312
+	$     匹配字符串尾.                        例如, 12$可以是312, 当不能是 123
+	[ ]    匹配括号内输入的任意字符.  例如[123]可以为1, 2 或3
+	*      匹配任意数量的前导字符.      例如, 1*2可以为任意数量个1(甚至没有), 后面跟一个2
+	+     匹配至少一个前导字符.          例如, 1+2必须为一个或多个1, 后跟一个2
+	?     匹配一个前导字符或为空.      例如 1?2可以为2或12
 ##加载第三方字体
 	https://fontstorage.com
 	https://www.dafont.com/
