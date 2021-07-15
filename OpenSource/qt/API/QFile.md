@@ -1,4 +1,5 @@
-# QFile class - QFile类
+QFile class - QFile类
+========================
 	QFile类提供了从文件读取和写入文件的接口。
 	QFile是用于读写文本、二进制文件和资源的I/O设备。QFile可以自己使用，或者更方便地与QTextStream或QDataStream一起使用。
 文件名通常在构造函数中传递，但是可以在任何时候使用setFileName()设置它。QFile期望文件分隔符为'/'，而与操作系统无关。不支持使用其他分隔符(例如'\')。

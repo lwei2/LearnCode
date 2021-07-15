@@ -1,10 +1,11 @@
 
 #include <QApplication>
-#include "subdialog1.h"
+#include "simpleexamplewidget.h"
+
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    subDialog1 s1;
-    s1.show();
+    SimpleExampleWidget w;
+    w.show();
     return app.exec();
 }

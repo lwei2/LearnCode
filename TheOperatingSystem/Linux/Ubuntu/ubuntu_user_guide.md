@@ -91,6 +91,12 @@ Ubuntu打开图形
 	3.Viwnior
 	4.gThumb
 
+ubuntu卸载jdk
+	#dpkg --list | grep -i jdk
+	#apt-get purge openjdk*
+	#apt-get purge icedtea-* openjdk-*
+	#dpkg --list | grep -i jdk
+
 
 Ubuntu系统与Windows系统时间不同步
 	1.#timedatectl set-timezone "Asia/Shanghai"
@@ -99,3 +105,4 @@ Ubuntu系统与Windows系统时间不同步
 1.在文件系统处查看
 2.在命令行的media处查看
 3.在命令行处mount处查看U盘挂载情况
+

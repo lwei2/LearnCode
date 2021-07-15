@@ -3,9 +3,13 @@ Qt例子
 HelloWorld
 #常用例子
 	QDialog.
+		QDialog0011-对话框四边无邻角
 		QDialog0012-自绘对话框(画椭圆)
 	QSettings
 		QSettings0001-配置文件读写		
+	QPainter
+		QPainter0001-画线
+		QPainter0002-画文本
 #模型例子	
 	1.树模型
 		Treemodel0001
