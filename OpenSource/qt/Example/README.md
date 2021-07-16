@@ -10,6 +10,7 @@ HelloWorld
 	QPainter
 		QPainter0001-画线
 		QPainter0002-画文本
+		QPainter0003-画弧
 #模型例子	
 	1.树模型
 		Treemodel0001
